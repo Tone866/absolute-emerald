@@ -4129,6 +4129,70 @@ const struct Trainer gTrainers[] = {
         .party = ITEM_CUSTOM_MOVES(sParty_Sidney),
     },
 
+    [TRAINER_SIDNEY_2] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_SIDNEY,
+#if ENGLISH
+        .trainerName = _("SIDNEY"),
+#elif GERMAN
+        .trainerName = _("ULRICH"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_SETUP_FIRST_TURN,
+        .party = ITEM_CUSTOM_MOVES(sParty_Sidney2),
+    },
+
+    [TRAINER_SIDNEY_3] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_SIDNEY,
+#if ENGLISH
+        .trainerName = _("SIDNEY"),
+#elif GERMAN
+        .trainerName = _("ULRICH"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_SETUP_FIRST_TURN,
+        .party = ITEM_CUSTOM_MOVES(sParty_Sidney3),
+    },
+
+    [TRAINER_SIDNEY_4] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_SIDNEY,
+#if ENGLISH
+        .trainerName = _("SIDNEY"),
+#elif GERMAN
+        .trainerName = _("ULRICH"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_SETUP_FIRST_TURN,
+        .party = ITEM_CUSTOM_MOVES(sParty_Sidney4),
+    },
+
+    [TRAINER_SIDNEY_5] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_SIDNEY,
+#if ENGLISH
+        .trainerName = _("SIDNEY"),
+#elif GERMAN
+        .trainerName = _("ULRICH"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_SETUP_FIRST_TURN,
+        .party = ITEM_CUSTOM_MOVES(sParty_Sidney5),
+    },
+
     [TRAINER_PHOEBE] =
     {
         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
@@ -4143,6 +4207,66 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = ITEM_CUSTOM_MOVES(sParty_Phoebe),
+    },
+    [TRAINER_PHOEBE_2] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_PHOEBE,
+#if ENGLISH
+        .trainerName = _("PHOEBE"),
+#elif GERMAN
+        .trainerName = _("ANTONIA"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Phoebe2),
+    },
+    [TRAINER_PHOEBE_3] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_PHOEBE,
+#if ENGLISH
+        .trainerName = _("PHOEBE"),
+#elif GERMAN
+        .trainerName = _("ANTONIA"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Phoebe3),
+    },
+    [TRAINER_PHOEBE_4] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_PHOEBE,
+#if ENGLISH
+        .trainerName = _("PHOEBE"),
+#elif GERMAN
+        .trainerName = _("ANTONIA"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Phoebe4),
+    },
+    [TRAINER_PHOEBE_5] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_PHOEBE,
+#if ENGLISH
+        .trainerName = _("PHOEBE"),
+#elif GERMAN
+        .trainerName = _("ANTONIA"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Phoebe5),
     },
 
     [TRAINER_GLACIA] =
@@ -4160,7 +4284,66 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = ITEM_CUSTOM_MOVES(sParty_Glacia),
     },
-
+    [TRAINER_GLACIA_2] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_GLACIA,
+#if ENGLISH
+        .trainerName = _("GLACIA"),
+#elif GERMAN
+        .trainerName = _("FROSINA"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Glacia2),
+    },
+    [TRAINER_GLACIA_3] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_GLACIA,
+#if ENGLISH
+        .trainerName = _("GLACIA"),
+#elif GERMAN
+        .trainerName = _("FROSINA"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Glacia3),
+    },
+    [TRAINER_GLACIA_4] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_GLACIA,
+#if ENGLISH
+        .trainerName = _("GLACIA"),
+#elif GERMAN
+        .trainerName = _("FROSINA"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Glacia4),
+    },
+    [TRAINER_GLACIA_5] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_GLACIA,
+#if ENGLISH
+        .trainerName = _("GLACIA"),
+#elif GERMAN
+        .trainerName = _("FROSINA"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Glacia5),
+    },
     [TRAINER_DRAKE] =
     {
         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
@@ -4175,6 +4358,66 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = ITEM_CUSTOM_MOVES(sParty_Drake),
+    },
+    [TRAINER_DRAKE_2] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_DRAKE,
+#if ENGLISH
+        .trainerName = _("DRAKE"),
+#elif GERMAN
+        .trainerName = _("DRAGAN"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Drake2),
+    },
+    [TRAINER_DRAKE_3] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_DRAKE,
+#if ENGLISH
+        .trainerName = _("DRAKE"),
+#elif GERMAN
+        .trainerName = _("DRAGAN"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Drake3),
+    },
+    [TRAINER_DRAKE_4] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_DRAKE,
+#if ENGLISH
+        .trainerName = _("DRAKE"),
+#elif GERMAN
+        .trainerName = _("DRAGAN"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Drake4),
+    },
+    [TRAINER_DRAKE_5] =
+    {
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_DRAKE,
+#if ENGLISH
+        .trainerName = _("DRAKE"),
+#elif GERMAN
+        .trainerName = _("DRAGAN"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Drake5),
     },
 
     [TRAINER_ROXANNE_1] =
@@ -5255,6 +5498,51 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = ITEM_CUSTOM_MOVES(sParty_Wallace),
+    },
+    [TRAINER_WALLACE_2] =
+    {
+        .trainerClass = TRAINER_CLASS_CHAMPION,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CHAMPION_WALLACE,
+#if ENGLISH
+        .trainerName = _("WALLACE"),
+#elif GERMAN
+        .trainerName = _("WASSILI"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Wallace2),
+    },
+    [TRAINER_WALLACE_3] =
+    {
+        .trainerClass = TRAINER_CLASS_CHAMPION,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CHAMPION_WALLACE,
+#if ENGLISH
+        .trainerName = _("WALLACE"),
+#elif GERMAN
+        .trainerName = _("WASSILI"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Wallace3),
+    },
+    [TRAINER_WALLACE_4] =
+    {
+        .trainerClass = TRAINER_CLASS_CHAMPION,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CHAMPION_WALLACE,
+#if ENGLISH
+        .trainerName = _("WALLACE"),
+#elif GERMAN
+        .trainerName = _("WASSILI"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Wallace4),
     },
 
     [TRAINER_ANDREW] =
@@ -12620,6 +12908,66 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = ITEM_CUSTOM_MOVES(sParty_Steven),
     },
+    [TRAINER_STEVEN_2] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_STEVEN,
+#if ENGLISH
+        .trainerName = _("STEVEN"),
+#elif GERMAN
+        .trainerName = _("TROY"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Steven2),
+    },
+    [TRAINER_STEVEN_3] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_STEVEN,
+#if ENGLISH
+        .trainerName = _("STEVEN"),
+#elif GERMAN
+        .trainerName = _("TROY"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Steven3),
+    },
+    [TRAINER_STEVEN_4] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_STEVEN,
+#if ENGLISH
+        .trainerName = _("STEVEN"),
+#elif GERMAN
+        .trainerName = _("TROY"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Steven4),
+    },
+    [TRAINER_STEVEN_5] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_STEVEN,
+#if ENGLISH
+        .trainerName = _("STEVEN"),
+#elif GERMAN
+        .trainerName = _("TROY"),
+#endif
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_Steven5),
+    },
 
     [TRAINER_ANABEL] =
     {
@@ -13346,9 +13694,458 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = 0,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_Red),
+        .party = ITEM_CUSTOM_MOVES(sParty_Red),
     },
-
+    [TRAINER_RED_2] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_RED,
+#if ENGLISH
+        .trainerName = _("RED"),
+#elif GERMAN
+        .trainerName = _("ROT"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = 0,
+        .party = ITEM_CUSTOM_MOVES(sParty_Red2),
+    },
+    [TRAINER_RED_3] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_RED,
+#if ENGLISH
+        .trainerName = _("RED"),
+#elif GERMAN
+        .trainerName = _("ROT"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = 0,
+        .party = ITEM_CUSTOM_MOVES(sParty_Red3),
+    },
+    [TRAINER_GOLD] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_GOLD,
+#if ENGLISH
+        .trainerName = _("RED"),
+#elif GERMAN
+        .trainerName = _("GOLD"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = 0,
+        .party = ITEM_CUSTOM_MOVES(sParty_Gold),
+    },
+    [TRAINER_GOLD_2] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_GOLD,
+#if ENGLISH
+        .trainerName = _("RED"),
+#elif GERMAN
+        .trainerName = _("GOLD"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = 0,
+        .party = ITEM_CUSTOM_MOVES(sParty_Gold2),
+    },
+    [TRAINER_GOLD_3] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_GOLD,
+#if ENGLISH
+        .trainerName = _("RED"),
+#elif GERMAN
+        .trainerName = _("GOLD"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = 0,
+        .party = ITEM_CUSTOM_MOVES(sParty_Gold3),
+    },
+    [TRAINER_GOLD_4] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_GOLD,
+#if ENGLISH
+        .trainerName = _("GOLD"),
+#elif GERMAN
+        .trainerName = _("GOLD"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = 0,
+        .party = ITEM_CUSTOM_MOVES(sParty_Gold4),
+    },
+    [TRAINER_MAY_RED] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_MAY,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("MAIKE"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_red),
+    },
+    [TRAINER_MAY_RED2] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_MAY,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("MAIKE"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_red2),
+    },
+    [TRAINER_MAY_RED3] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_MAY,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("MAIKE"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_red3),
+    },
+    [TRAINER_MAY_RED4] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_MAY,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("MAIKE"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_red4),
+    },
+    [TRAINER_MAY_BLUE] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_MAY,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("MAIKE"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_blue),
+    },
+    [TRAINER_MAY_BLUE2] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_MAY,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("MAIKE"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_blue2),
+    },
+    [TRAINER_MAY_BLUE3] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_MAY,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("MAIKE"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_blue3),
+    },
+    [TRAINER_MAY_BLUE4] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_MAY,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("MAIKE"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_blue4),
+    },
+    [TRAINER_MAY_GREEN] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_MAY,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("MAIKE"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_green),
+    },
+    [TRAINER_MAY_GREEN2] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_MAY,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("MAIKE"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_green2),
+    },
+    [TRAINER_MAY_GREEN3] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_MAY,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("MAIKE"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_green3),
+    },
+    [TRAINER_MAY_GREEN4] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_MAY,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("MAIKE"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_green4),
+    },
+    [TRAINER_BRENDAN_RED] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("BRIX"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_red),
+    },
+    [TRAINER_BRENDAN_RED2] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("BRIX"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_red2),
+    },
+    [TRAINER_BRENDAN_RED3] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("BRIX"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_red3),
+    },
+    [TRAINER_BRENDAN_RED4] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("BRIX"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_red4),
+    },
+    [TRAINER_BRENDAN_BLUE] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("BRIX"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_blue),
+    },
+    [TRAINER_BRENDAN_BLUE2] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("BRIX"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_blue2),
+    },
+    [TRAINER_BRENDAN_BLUE3] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("BRIX"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_blue3),
+    },
+    [TRAINER_BRENDAN_BLUE4] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("BRIX"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_blue4),
+    },
+    [TRAINER_BRENDAN_GREEN] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("BRIX"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_green),
+    },
+    [TRAINER_BRENDAN_GREEN2] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("BRIX"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_green2),
+    },
+    [TRAINER_BRENDAN_GREEN3] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("BRIX"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_green3),
+    },
+    [TRAINER_BRENDAN_GREEN4] =
+    {
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+#if ENGLISH
+        .trainerName = _("MAY"),
+#elif GERMAN
+        .trainerName = _("BRIX"),
+#endif
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_May_green4),
+    },
     [TRAINER_LEAF] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,

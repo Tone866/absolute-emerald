@@ -42,6 +42,37 @@ SkyPillar_Top_EventScript_RayquazaFaceDown::
 	turnobject LOCALID_RAYQUAZA_SLEEPING, DIR_SOUTH
 	end
 
+SkyPillar_EventScript_Red::
+        call_if_eq VAR_RED_REMATCH, 1, SkyPillar_EventScript_Red1
+        call_if_eq VAR_RED_REMATCH, 2, SkyPillar_EventScript_Red2
+	trainerbattle_single TRAINER_RED, SkyPillarRedIntro, SkyPillarRedIntro, SkyPillarRedDefeated, NO_MUSIC
+	end
+SkyPillarRedDefeated:
+	setvar VAR_RED_REMATCH, 1
+        msgbox SkyPillarRedIntro, MSGBOX_DEFAULT
+        giveitem ITEM_OLD_SEA_MAP
+        setflag FLAG_ENABLE_SHIP_FARAWAY_ISLAND
+	release
+	end
+
+SkyPillar_EventScript_Red1:
+        trainerbattle_single TRAINER_RED_2, SkyPillarRedIntro, SkyPillarRedIntro, SkyPillarRedDefeated1, NO_MUSIC
+	end
+SkyPillarRedDefeated1:
+        setvar VAR_RED_REMATCH, 2
+        release
+	end
+
+SkyPillar_EventScript_Red2:
+	cleartrainerflag TRAINER_RED_3
+        trainerbattle_single TRAINER_RED_3, SkyPillarRedIntro, SkyPillarRedIntro, SkyPillarRedDefeated2, NO_MUSIC
+        release
+	end
+SkyPillarRedDefeated2::
+	msgbox SkyPillarRedIntro, MSGBOX_DEFAULT
+        release
+        end
+
 SkyPillar_Top_EventScript_Rayquaza::
 	lockall
 	waitse
@@ -58,11 +89,13 @@ SkyPillar_Top_EventScript_Rayquaza::
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SkyPillar_Top_EventScript_RanFromRayquaza
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SkyPillar_Top_EventScript_RanFromRayquaza
 	setflag FLAG_DEFEATED_RAYQUAZA
+	clearflag FLAG_HIDE_SKY_PILLAR_RED
 	releaseall
 	end
 
 SkyPillar_Top_EventScript_DefeatedRayquaza::
 	setflag FLAG_DEFEATED_RAYQUAZA
+        clearflag FLAG_HIDE_SKY_PILLAR_RED
 	goto SkyPillar_Top_EventScript_DefeatedRayquaza2
 	end
 
@@ -189,3 +222,9 @@ SkyPillar_Top_Text_RayquazaFlewOff:
 	.endif
 	.endif
 
+SkyPillarRedIntro:
+	.string "...\n"
+        .string "...$"
+
+SkyPillar_Ticket:
+	.string "... Nimm das! ...$"

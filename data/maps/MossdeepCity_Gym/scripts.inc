@@ -49,6 +49,10 @@ MossdeepCity_Gym_EventScript_SetSwitch4Metatiles::
 	end
 
 MossdeepCity_Gym_EventScript_TateAndLiza::
+        call_if_eq VAR_GYM_REMATCH, 1, MossdeepCity_Gym_EventScript_Rematch1
+        call_if_eq VAR_GYM_REMATCH, 2, MossdeepCity_Gym_EventScript_Rematch2
+        call_if_eq VAR_GYM_REMATCH, 3, MossdeepCity_Gym_EventScript_Rematch3
+        call_if_eq VAR_GYM_REMATCH, 4, MossdeepCity_Gym_EventScript_Rematch4
 	trainerbattle_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaIntro, MossdeepCity_Gym_Text_TateAndLizaDefeat, MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons, MossdeepCity_Gym_EventScript_TateAndLizaDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_TateAndLizaRematch
@@ -56,6 +60,73 @@ MossdeepCity_Gym_EventScript_TateAndLiza::
 	msgbox MossdeepCity_Gym_Text_TateAndLizaPostBattle, MSGBOX_DEFAULT
 	release
 	end
+
+MossdeepCity_Gym_EventScript_Rematch1::
+        goto_if_defeated TRAINER_TATE_AND_LIZA_2, MossdeepCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_TATE_AND_LIZA_2, MossdeepCity_Gym_Text_TateAndLizaPreRematch, MossdeepCity_Gym_Text_TateAndLizaRematchDefeat, MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_2, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_2, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_2, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_2, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_2, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_2, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_2, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_2, MossdeepCity_Gym_EventScript_NoRematch
+        goto MossdeepCity_Gym_EventScript_RematchWin
+
+MossdeepCity_Gym_EventScript_Rematch2::
+        goto_if_defeated TRAINER_TATE_AND_LIZA_3, MossdeepCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_TATE_AND_LIZA_3, MossdeepCity_Gym_Text_TateAndLizaPreRematch, MossdeepCity_Gym_Text_TateAndLizaRematchDefeat, MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_3, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_3, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_3, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_3, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_3, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_3, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_3, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_3, MossdeepCity_Gym_EventScript_NoRematch
+        goto MossdeepCity_Gym_EventScript_RematchWin
+
+MossdeepCity_Gym_EventScript_Rematch3::
+        goto_if_defeated TRAINER_TATE_AND_LIZA_4, MossdeepCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_TATE_AND_LIZA_4, MossdeepCity_Gym_Text_TateAndLizaPreRematch, MossdeepCity_Gym_Text_TateAndLizaRematchDefeat, MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_4, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_4, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_4, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_4, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_4, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_4, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_4, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_4, MossdeepCity_Gym_EventScript_NoRematch
+        goto MossdeepCity_Gym_EventScript_RematchWin
+
+MossdeepCity_Gym_EventScript_Rematch4::
+        goto_if_defeated TRAINER_TATE_AND_LIZA_5, MossdeepCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_TATE_AND_LIZA_5, MossdeepCity_Gym_Text_TateAndLizaPreRematch, MossdeepCity_Gym_Text_TateAndLizaRematchDefeat, MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_5, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_5, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_5, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_5, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_5, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_5, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_5, MossdeepCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_5, MossdeepCity_Gym_EventScript_NoRematch
+        goto MossdeepCity_Gym_EventScript_RematchWin
+
+MossdeepCity_Gym_EventScript_RematchWin::
+        compare_var_to_var VAR_GYM_REMATCH, VAR_GYM_REMATCH_MAX
+        goto_if_le MossdeepCity_Gym_EventScript_NoRematch
+        compare VAR_GYM_REMATCH, 3
+        goto_if_eq MossdeepCity_Gym_EventScript_NoRematch
+        addvar VAR_GYM_REMATCH_MAX, 1
+
+
+MossdeepCity_Gym_EventScript_NoRematch::
+        faceplayer
+        msgbox MossdeepCity_Gym_Text_TateAndLizaPostRematch, MSGBOX_AUTOCLOSE
+        release
+        end
+
 
 MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
 	message MossdeepCity_Gym_Text_ReceivedMindBadge

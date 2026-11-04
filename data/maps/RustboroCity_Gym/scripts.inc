@@ -2,6 +2,10 @@ RustboroCity_Gym_MapScripts::
 	.byte 0
 
 RustboroCity_Gym_EventScript_Roxanne::
+	call_if_eq VAR_GYM_REMATCH, 1, RustboroCity_Gym_EventScript_Rematch1
+        call_if_eq VAR_GYM_REMATCH, 2, RustboroCity_Gym_EventScript_Rematch2
+        call_if_eq VAR_GYM_REMATCH, 3, RustboroCity_Gym_EventScript_Rematch3
+        call_if_eq VAR_GYM_REMATCH, 4, RustboroCity_Gym_EventScript_Rematch4
 	trainerbattle_single TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_RoxanneRematch
@@ -9,6 +13,74 @@ RustboroCity_Gym_EventScript_Roxanne::
 	msgbox RustboroCity_Gym_Text_RoxannePostBattle, MSGBOX_DEFAULT
 	release
 	end
+
+RustboroCity_Gym_EventScript_Rematch1::
+	goto_if_defeated TRAINER_ROXANNE_2, RustboroCity_Gym_EventScript_NoRematch
+	trainerbattle_double TRAINER_ROXANNE_2, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
+	goto_if_not_defeated TRAINER_ROXANNE_2, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_2, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_2, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_2, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_2, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_2, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_2, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_2, RustboroCity_Gym_EventScript_NoRematch
+	goto RustboroCity_Gym_EventScript_RematchWin
+
+RustboroCity_Gym_EventScript_Rematch2::
+        goto_if_defeated TRAINER_ROXANNE_3, RustboroCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_ROXANNE_3, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_3, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_3, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_3, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_3, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_3, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_3, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_3, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_3, RustboroCity_Gym_EventScript_NoRematch
+        goto RustboroCity_Gym_EventScript_RematchWin
+
+RustboroCity_Gym_EventScript_Rematch3::
+        goto_if_defeated TRAINER_ROXANNE_4, RustboroCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_ROXANNE_4, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_4, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_4, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_4, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_4, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_4, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_4, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_4, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_4, RustboroCity_Gym_EventScript_NoRematch
+        goto RustboroCity_Gym_EventScript_RematchWin
+
+RustboroCity_Gym_EventScript_Rematch4::
+        goto_if_defeated TRAINER_ROXANNE_5, RustboroCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_ROXANNE_5, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_5, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_5, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_5, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_5, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_5, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_5, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_5, RustboroCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_5, RustboroCity_Gym_EventScript_NoRematch
+        goto RustboroCity_Gym_EventScript_RematchWin
+
+RustboroCity_Gym_EventScript_RematchWin::
+        compare_var_to_var VAR_GYM_REMATCH, VAR_GYM_REMATCH_MAX
+        goto_if_le RustboroCity_Gym_EventScript_NoRematch
+        compare VAR_GYM_REMATCH, 3
+        goto_if_eq RustboroCity_Gym_EventScript_NoRematch
+        addvar VAR_GYM_REMATCH_MAX, 1
+	msgbox RustboroCity_Gym_Text_RoxannePostRematch, MSGBOX_AUTOCLOSE
+	release
+	end
+
+RustboroCity_Gym_EventScript_NoRematch::
+	faceplayer
+        msgbox RustboroCity_Gym_Text_RoxannePostRematch, MSGBOX_AUTOCLOSE
+	release
+        end
 
 RustboroCity_Gym_EventScript_RoxanneDefeated::
 	message RustboroCity_Gym_Text_ReceivedStoneBadge
@@ -61,6 +133,123 @@ RustboroCity_Gym_EventScript_GymGuide::
 	release
 	end
 
+RustboroCity_Gym_EventScript_Rematch::
+        lock
+        faceplayer
+        goto_if_set FLAG_BADGE08_GET, RustboroCity_Gym_EventScript_SelectLvl
+        msgbox RustboroCity_Gym_Text_NoBadges, MSGBOX_DEFAULT
+        release
+        end
+
+RustboroCity_Gym_EventScript_SelectLvl::
+	msgbox RustboroCity_Gym_Text_LvlText, MSGBOX_DEFAULT
+	call_if_eq VAR_GYM_REMATCH_MAX, 0, RustboroCity_Gym_EventScript_Lvl1
+        call_if_eq VAR_GYM_REMATCH_MAX, 1, RustboroCity_Gym_EventScript_Lvl2
+        call_if_eq VAR_GYM_REMATCH_MAX, 2, RustboroCity_Gym_EventScript_Lvl3
+        call_if_eq VAR_GYM_REMATCH_MAX, 3, RustboroCity_Gym_EventScript_Lvl4
+
+RustboroCity_Gym_EventScript_Lvl1:
+        multichoice 0, 0, MULTI_GYM_LVL1, TRUE
+        goto_if_eq VAR_RESULT, 0, RustboroCity_Gym_EventScript_SetLvl1
+        goto_if_eq VAR_RESULT, 1, RustboroCity_Gym_EventScript_Back
+	end
+
+RustboroCity_Gym_EventScript_Lvl2:
+        multichoice 0, 0, MULTI_GYM_LVL2, TRUE
+        goto_if_eq VAR_RESULT, 0, RustboroCity_Gym_EventScript_SetLvl1
+        goto_if_eq VAR_RESULT, 1, RustboroCity_Gym_EventScript_SetLvl2
+        goto_if_eq VAR_RESULT, 2, RustboroCity_Gym_EventScript_Back
+        end
+
+RustboroCity_Gym_EventScript_Lvl3:
+        multichoice 0, 0, MULTI_GYM_LVL3, TRUE
+        goto_if_eq VAR_RESULT, 0, RustboroCity_Gym_EventScript_SetLvl1
+        goto_if_eq VAR_RESULT, 1, RustboroCity_Gym_EventScript_SetLvl2
+        goto_if_eq VAR_RESULT, 2, RustboroCity_Gym_EventScript_SetLvl3
+        goto_if_eq VAR_RESULT, 3, RustboroCity_Gym_EventScript_Back
+        end
+
+RustboroCity_Gym_EventScript_Lvl4:
+        multichoice 0, 0, MULTI_GYM_LVL4, TRUE
+        goto_if_eq VAR_RESULT, 0, RustboroCity_Gym_EventScript_SetLvl1
+        goto_if_eq VAR_RESULT, 1, RustboroCity_Gym_EventScript_SetLvl2
+        goto_if_eq VAR_RESULT, 2, RustboroCity_Gym_EventScript_SetLvl3
+        goto_if_eq VAR_RESULT, 3, RustboroCity_Gym_EventScript_SetLvl4
+        goto_if_eq VAR_RESULT, 4, RustboroCity_Gym_EventScript_Back
+        end
+
+RustboroCity_Gym_EventScript_Lvl5:
+        multichoice 0, 0, MULTI_GYM_LVL5, TRUE
+        goto_if_eq VAR_RESULT, 0, RustboroCity_Gym_EventScript_SetLvl1
+        goto_if_eq VAR_RESULT, 1, RustboroCity_Gym_EventScript_SetLvl2
+        goto_if_eq VAR_RESULT, 2, RustboroCity_Gym_EventScript_SetLvl3
+        goto_if_eq VAR_RESULT, 3, RustboroCity_Gym_EventScript_SetLvl4
+        goto_if_eq VAR_RESULT, 4, RustboroCity_Gym_EventScript_SetLvl5
+        goto_if_eq VAR_RESULT, 5, RustboroCity_Gym_EventScript_Back
+        end
+
+RustboroCity_Gym_EventScript_SetLvl1:
+	setvar VAR_GYM_REMATCH, 1
+	goto RustboroCity_Gym_EventScript_End
+
+RustboroCity_Gym_EventScript_SetLvl2:
+        setvar VAR_GYM_REMATCH, 2
+        goto RustboroCity_Gym_EventScript_End
+
+RustboroCity_Gym_EventScript_SetLvl3:
+        setvar VAR_GYM_REMATCH, 3
+        goto RustboroCity_Gym_EventScript_End
+
+RustboroCity_Gym_EventScript_SetLvl4:
+        setvar VAR_GYM_REMATCH, 4
+        goto RustboroCity_Gym_EventScript_End
+
+RustboroCity_Gym_EventScript_SetLvl5:
+        setvar VAR_GYM_REMATCH, 5
+        goto RustboroCity_Gym_EventScript_End
+
+RustboroCity_Gym_EventScript_End:
+        cleartrainerflag TRAINER_ROXANNE_2
+        cleartrainerflag TRAINER_ROXANNE_3
+        cleartrainerflag TRAINER_ROXANNE_4
+        cleartrainerflag TRAINER_ROXANNE_5
+        cleartrainerflag TRAINER_BRAWLY_2
+        cleartrainerflag TRAINER_BRAWLY_3
+        cleartrainerflag TRAINER_BRAWLY_4
+        cleartrainerflag TRAINER_BRAWLY_5
+        cleartrainerflag TRAINER_WATTSON_2
+        cleartrainerflag TRAINER_WATTSON_3
+        cleartrainerflag TRAINER_WATTSON_4
+        cleartrainerflag TRAINER_WATTSON_5
+        cleartrainerflag TRAINER_FLANNERY_2
+        cleartrainerflag TRAINER_FLANNERY_3
+        cleartrainerflag TRAINER_FLANNERY_4
+        cleartrainerflag TRAINER_FLANNERY_5
+        cleartrainerflag TRAINER_NORMAN_2
+        cleartrainerflag TRAINER_NORMAN_3
+        cleartrainerflag TRAINER_NORMAN_4
+        cleartrainerflag TRAINER_NORMAN_5
+        cleartrainerflag TRAINER_WINONA_2
+        cleartrainerflag TRAINER_WINONA_3
+        cleartrainerflag TRAINER_WINONA_4
+        cleartrainerflag TRAINER_WINONA_5
+        cleartrainerflag TRAINER_TATE_AND_LIZA_2
+        cleartrainerflag TRAINER_TATE_AND_LIZA_3
+        cleartrainerflag TRAINER_TATE_AND_LIZA_4
+        cleartrainerflag TRAINER_TATE_AND_LIZA_5
+        cleartrainerflag TRAINER_JUAN_2
+        cleartrainerflag TRAINER_JUAN_3
+        cleartrainerflag TRAINER_JUAN_4
+        cleartrainerflag TRAINER_JUAN_5
+        msgbox RustboroCity_Gym_Text_LevelSet, MSGBOX_DEFAULT
+        release
+        end
+
+RustboroCity_Gym_EventScript_Back::
+	msgbox RustboroCity_Gym_Text_Back, MSGBOX_DEFAULT
+	release
+	end
+
 RustboroCity_Gym_EventScript_GymGuidePostVictory::
 	msgbox RustboroCity_Gym_Text_GymGuidePostVictory, MSGBOX_DEFAULT
 	release
@@ -102,6 +291,23 @@ RustboroCity_Gym_EventScript_RegisterRoxanne::
 	clearflag FLAG_ENABLE_ROXANNE_FIRST_CALL
 	releaseall
 	end
+
+RustboroCity_Gym_Text_LvlText:
+        .string "Möchtest du die Arenen zu einer\p"
+        .string "Revanche herausfordern?\n"
+        .string "Welches Level möchtest du?$"
+
+RustboroCity_Gym_Text_NoBadges:
+        .string "Wenn du alle Orden hast, kannst du\p"
+	.string "wiederkommen und die Arenaleiter\n"
+	.string "zu einer Revanche herausfordern.$"
+
+RustboroCity_Gym_Text_Back:
+	.string "Ok, es bleibt beim aktuellen Level.$"
+
+RustboroCity_Gym_Text_LevelSet:
+	.string "Dein Level wurde gesetzt!\p"
+	.string "Arenaleiter werden zurückgesetzt!$"
 
 RustboroCity_Gym_Text_GymGuideAdvice:
 	.ifdef ENGLISH

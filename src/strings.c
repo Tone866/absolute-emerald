@@ -256,6 +256,16 @@ const u8 gText_TheBattle[] = _("the battle");
 const u8 gText_ThePokemonList[] = _("the POKéMON LIST");
 const u8 gText_TheShop[] = _("the shop");
 const u8 gText_ThePC[] = _("the PC");
+const u8 gText_Lv0[] = _("0");
+const u8 gText_Lv1[] = _("1");
+const u8 gText_Lv2[] = _("2");
+const u8 gText_Lv3[] = _("3");
+const u8 gText_Lv4[] = _("4");
+const u8 gText_Lv5[] = _("5");
+const u8 gText_Lv6[] = _("6");
+const u8 gText_Lv7[] = _("7");
+const u8 gText_Lv8[] = _("8");
+
 
 const u8 *const gBagMenu_ReturnToStrings[] =
 {
@@ -1823,6 +1833,7 @@ const u8 gText_PokeBalls[] = _("POKé BALLS");
 const u8 gText_Berry[] = _("BERRY");
 const u8 gText_Berries[] = _("BERRIES");
 
+
 #elif GERMAN
 
 ALIGNED(4)
@@ -2077,6 +2088,15 @@ const u8 gText_TheBattle[] = _("zum Kampf");
 const u8 gText_ThePokemonList[] = _("zur POKéMON-LISTE");
 const u8 gText_TheShop[] = _("zum Geschäft");
 const u8 gText_ThePC[] = _("zum PC");
+const u8 gText_Lv0[] = _("0");
+const u8 gText_Lv1[] = _("1");
+const u8 gText_Lv2[] = _("2");
+const u8 gText_Lv3[] = _("3");
+const u8 gText_Lv4[] = _("4");
+const u8 gText_Lv5[] = _("5");
+const u8 gText_Lv6[] = _("6");
+const u8 gText_Lv7[] = _("7");
+const u8 gText_Lv8[] = _("8");
 
 const u8 *const gBagMenu_ReturnToStrings[] =
 {

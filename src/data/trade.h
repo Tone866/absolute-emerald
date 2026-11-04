@@ -1100,6 +1100,30 @@ static const struct InGameTrade sIngameTrades[] =
         .otGender = FEMALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_SKITTY
+    },
+    [INGAME_TRADE_ABSOL] =
+    {
+#if ENGLISH
+        .nickname = _("ABSOL"),
+#elif GERMAN
+        .nickname = _("ABSOL"),
+#endif
+        .species = SPECIES_ABSOL,
+        .ivs = {24, 25, 24, 25, 24, 24},
+        .abilityNum = 0,
+        .otId = 77777,
+        .conditions = {25, 25, 15, 20, 15},
+        .personality = 0x8B,
+        .heldItem = ITEM_RETRO_MAIL,
+        .mailNum = 2,
+#if ENGLISH
+        .otName = _("CYNTHIA"),
+#elif GERMAN
+        .otName = _("CYNTHIA"),
+#endif
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_RALTS
     }
 };
 

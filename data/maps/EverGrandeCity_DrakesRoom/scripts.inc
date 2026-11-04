@@ -43,9 +43,33 @@ EverGrandeCity_DrakesRoom_EventScript_Drake::
 	goto_if_set FLAG_DEFEATED_ELITE_4_DRAKE, EverGrandeCity_DrakesRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_DrakesRoom_Text_IntroSpeech, MSGBOX_DEFAULT
+        call_if_eq VAR_LIGA_REMATCH, 1, EverGrandeCity_EventScript4_Rematch1
+        call_if_eq VAR_LIGA_REMATCH, 2, EverGrandeCity_EventScript4_Rematch2
+        call_if_eq VAR_LIGA_REMATCH, 3, EverGrandeCity_EventScript4_Rematch3
+        call_if_eq VAR_LIGA_REMATCH, 4, EverGrandeCity_EventScript4_Rematch4
 	trainerbattle_no_intro TRAINER_DRAKE, EverGrandeCity_DrakesRoom_Text_Defeat
 	goto EverGrandeCity_DrakesRoom_EventScript_Defeated
 	end
+
+EverGrandeCity_EventScript4_Rematch1:
+	trainerbattle_no_intro TRAINER_DRAKE_2, EverGrandeCity_DrakesRoom_Text_Defeat
+        goto EverGrandeCity_DrakesRoom_EventScript_Defeated
+        end
+
+EverGrandeCity_EventScript4_Rematch2:
+	trainerbattle_no_intro TRAINER_DRAKE_3, EverGrandeCity_DrakesRoom_Text_Defeat
+        goto EverGrandeCity_DrakesRoom_EventScript_Defeated
+        end
+
+EverGrandeCity_EventScript4_Rematch3:
+	trainerbattle_no_intro TRAINER_DRAKE_4, EverGrandeCity_DrakesRoom_Text_Defeat
+        goto EverGrandeCity_DrakesRoom_EventScript_Defeated
+        end
+
+EverGrandeCity_EventScript4_Rematch4:
+	trainerbattle_no_intro TRAINER_DRAKE_5, EverGrandeCity_DrakesRoom_Text_Defeat
+        goto EverGrandeCity_DrakesRoom_EventScript_Defeated
+        end
 
 EverGrandeCity_DrakesRoom_EventScript_PostBattleSpeech::
 	msgbox EverGrandeCity_DrakesRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT

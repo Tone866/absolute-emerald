@@ -42,9 +42,33 @@ EverGrandeCity_PhoebesRoom_EventScript_Phoebe::
 	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_PhoebesRoom_Text_IntroSpeech, MSGBOX_DEFAULT
+        call_if_eq VAR_LIGA_REMATCH, 1, EverGrandeCity_EventScript2_Rematch1
+        call_if_eq VAR_LIGA_REMATCH, 2, EverGrandeCity_EventScript2_Rematch2
+        call_if_eq VAR_LIGA_REMATCH, 3, EverGrandeCity_EventScript2_Rematch3
+        call_if_eq VAR_LIGA_REMATCH, 4, EverGrandeCity_EventScript2_Rematch4
 	trainerbattle_no_intro TRAINER_PHOEBE, EverGrandeCity_PhoebesRoom_Text_Defeat
 	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
 	end
+
+EverGrandeCity_EventScript2_Rematch1:
+	trainerbattle_no_intro TRAINER_PHOEBE_2, EverGrandeCity_PhoebesRoom_Text_Defeat
+        goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
+        end
+
+EverGrandeCity_EventScript2_Rematch2:
+	trainerbattle_no_intro TRAINER_PHOEBE_3, EverGrandeCity_PhoebesRoom_Text_Defeat
+        goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
+        end
+
+EverGrandeCity_EventScript2_Rematch3:
+	trainerbattle_no_intro TRAINER_PHOEBE_4, EverGrandeCity_PhoebesRoom_Text_Defeat
+        goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
+        end
+
+EverGrandeCity_EventScript2_Rematch4:
+	trainerbattle_no_intro TRAINER_PHOEBE_5, EverGrandeCity_PhoebesRoom_Text_Defeat
+        goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
+        end
 
 EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech::
 	msgbox EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT

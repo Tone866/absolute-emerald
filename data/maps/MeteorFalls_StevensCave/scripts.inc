@@ -5,7 +5,6 @@ MeteorFalls_StevensCave_MapScripts::
 
 MeteorFalls_StevensCave_EventScript_Steven::
 	lock
-	goto_if_set FLAG_DEFEATED_METEOR_FALLS_STEVEN, MeteorFalls_StevensCave_EventScript_Defeated
 	waitse
 	playse SE_PIN
 	applymovement LOCALID_STEVEN, Common_Movement_ExclamationMark
@@ -15,11 +14,38 @@ MeteorFalls_StevensCave_EventScript_Steven::
 	applymovement LOCALID_STEVEN, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox MeteorFalls_StevensCave_Text_ShouldKnowHowGoodIAmExpectWorst, MSGBOX_DEFAULT
+        call_if_eq VAR_TROY_REMATCH, 1, MeteorFalls_StevensCave_EventScript_Steven2
+        call_if_eq VAR_TROY_REMATCH, 2, MeteorFalls_StevensCave_EventScript_Steven3
+        call_if_eq VAR_TROY_REMATCH, 3, MeteorFalls_StevensCave_EventScript_Steven4
 	trainerbattle_no_intro TRAINER_STEVEN, MeteorFalls_StevensCave_Text_StevenDefeat
 	msgbox MeteorFalls_StevensCave_Text_MyPredictionCameTrue, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_METEOR_FALLS_STEVEN
+        setvar VAR_TROY_REMATCH, 1
+        msgbox MeteorFalls_StevensCave_Ticket, MSGBOX_DEFAULT
+        giveitem ITEM_AURORA_TICKET
+        setflag FLAG_ENABLE_SHIP_BIRTH_ISLAND
 	release
 	end
+
+MeteorFalls_StevensCave_EventScript_Steven2:
+        trainerbattle_no_intro TRAINER_STEVEN_2, MeteorFalls_StevensCave_Text_StevenDefeat
+        msgbox MeteorFalls_StevensCave_Text_MyPredictionCameTrue, MSGBOX_DEFAULT
+	setvar VAR_TROY_REMATCH, 2
+        release
+        end
+
+MeteorFalls_StevensCave_EventScript_Steven3:
+        trainerbattle_no_intro TRAINER_STEVEN_3, MeteorFalls_StevensCave_Text_StevenDefeat
+        msgbox MeteorFalls_StevensCave_Text_MyPredictionCameTrue, MSGBOX_DEFAULT
+        setvar VAR_TROY_REMATCH, 3
+        release
+        end
+
+MeteorFalls_StevensCave_EventScript_Steven4:
+        trainerbattle_no_intro TRAINER_STEVEN_4, MeteorFalls_StevensCave_Text_StevenDefeat
+        msgbox MeteorFalls_StevensCave_Text_MyPredictionCameTrue, MSGBOX_DEFAULT
+        release
+        end
 
 MeteorFalls_StevensCave_EventScript_Defeated::
 	applymovement LOCALID_STEVEN, Common_Movement_FacePlayer
@@ -104,3 +130,10 @@ MeteorFalls_StevensCave_Text_MyPredictionCameTrue:
 	.endif
 	.endif
 
+MeteorFalls_StevensCave_Ticket:
+	.string "Dieses Ticket möchte ich dir schenken.\n"
+	.string "Damit kannst du zur ENTSTEHUNGSINSEL.\p"
+        .string "Dort gibt es noch Geheimnisse zu\l"
+	.string "lüften, aber ich komme einfach nicht\n"
+	.string "dazu. Würdest du das für mich\l"
+	.string "übernehmen?$"

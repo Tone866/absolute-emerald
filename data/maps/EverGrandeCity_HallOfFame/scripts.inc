@@ -1,4 +1,5 @@
 .set LOCALID_WALLACE, 1
+.set LOCALID_STEVEN, 2
 
 EverGrandeCity_HallOfFame_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, EverGrandeCity_HallOfFame_OnFrame
@@ -18,25 +19,31 @@ EverGrandeCity_HallOfFame_OnFrame:
 	.2byte 0
 
 EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
+	clearflag FLAG_HIDE_ROUTE_103_MAY
 	lockall
 	applymovement LOCALID_WALLACE, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame1
+        applymovement LOCALID_STEVEN, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame1
 	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame1
 	waitmovement 0
 	applymovement LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterRight
+        applymovement LOCALID_STEVEN, Common_Movement_WalkInPlaceFasterRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	msgbox EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_WALLACE, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame2
+        applymovement LOCALID_STEVEN, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame2
 	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame2
 	waitmovement 0
 	delay 20
 	applymovement LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterRight
+        applymovement LOCALID_STEVEN, Common_Movement_WalkInPlaceFasterRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	msgbox EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterUp
+        applymovement LOCALID_STEVEN, Common_Movement_WalkInPlaceFasterUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	delay 20
@@ -93,7 +100,7 @@ EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions:
 	.string "are honored.$"
 	.else
 	.ifdef GERMAN
-	.string "WASSILI: Dieser Raum…\p"
+	.string "Dieser Raum…\p"
 	.string "Hier verzeichnen wir die POKéMON, die\n"
 	.string "siegreich aus harten Kämpfen hervorge-\l"
 	.string "gangen sind.\p"
@@ -110,7 +117,7 @@ EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames:
 	.string "the partners who battled with you.$"
 	.else
 	.ifdef GERMAN
-	.string "WASSILI: Komm, schreiben wir deinen\n"
+	.string "Komm, schreiben wir deinen\n"
 	.string "Namen nieder, als ein TRAINER, der über\l"
 	.string "die POKéMON LIGA triumphiert hat - und\l"
 	.string "die Namen deiner Partner ebenfalls.$"

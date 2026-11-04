@@ -1,6 +1,7 @@
 .set LOCALID_NURSE, 1
 .set LOCALID_GUARD_1, 3
 .set LOCALID_GUARD_2, 4
+.set LOCALID_GUARD_3, 5
 
 EverGrandeCity_PokemonLeague_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, EverGrandeCity_PokemonLeague_1F_OnTransition
@@ -103,6 +104,111 @@ EverGrandeCity_PokemonLeague_1F_EventScript_GoForth::
 	releaseall
 	end
 
+EverGrandeCity_EventScript_Rematch::
+        lock
+        faceplayer
+        goto_if_set FLAG_SYS_GAME_CLEAR, EverGrandeCity_EventScript_SelectLvl
+        msgbox EverGrandeCity_Text_NoBadges, MSGBOX_DEFAULT
+        release
+        end
+
+EverGrandeCity_EventScript_SelectLvl::
+        msgbox EverGrandeCity_Text_LvlText, MSGBOX_DEFAULT
+        call_if_eq VAR_LIGA_REMATCH_MAX, 0, EverGrandeCity_EventScript_Lvl1
+        call_if_eq VAR_LIGA_REMATCH_MAX, 1, EverGrandeCity_EventScript_Lvl2
+        call_if_eq VAR_LIGA_REMATCH_MAX, 2, EverGrandeCity_EventScript_Lvl3
+        call_if_eq VAR_LIGA_REMATCH_MAX, 3, EverGrandeCity_EventScript_Lvl4
+
+EverGrandeCity_EventScript_Lvl1:
+        multichoice 0, 0, MULTI_LIGA_LVL1, TRUE
+        goto_if_eq VAR_RESULT, 0, EverGrandeCity_EventScript_SetLvl0
+        goto_if_eq VAR_RESULT, 1, EverGrandeCity_EventScript_SetLvl1
+        goto_if_eq VAR_RESULT, 2, EverGrandeCity_EventScript_Back
+        end
+
+EverGrandeCity_EventScript_Lvl2:
+        multichoice 0, 0, MULTI_LIGA_LVL2, TRUE
+        goto_if_eq VAR_RESULT, 0, EverGrandeCity_EventScript_SetLvl0
+        goto_if_eq VAR_RESULT, 1, EverGrandeCity_EventScript_SetLvl1
+        goto_if_eq VAR_RESULT, 2, EverGrandeCity_EventScript_SetLvl2
+        goto_if_eq VAR_RESULT, 3, EverGrandeCity_EventScript_Back
+        end
+
+EverGrandeCity_EventScript_Lvl3:
+        multichoice 0, 0, MULTI_LIGA_LVL3, TRUE
+        goto_if_eq VAR_RESULT, 0, EverGrandeCity_EventScript_SetLvl0
+        goto_if_eq VAR_RESULT, 1, EverGrandeCity_EventScript_SetLvl1
+        goto_if_eq VAR_RESULT, 2, EverGrandeCity_EventScript_SetLvl2
+        goto_if_eq VAR_RESULT, 3, EverGrandeCity_EventScript_SetLvl3
+        goto_if_eq VAR_RESULT, 4, EverGrandeCity_EventScript_Back
+        end
+
+EverGrandeCity_EventScript_Lvl4:
+        multichoice 0, 0, MULTI_LIGA_LVL4, TRUE
+        goto_if_eq VAR_RESULT, 0, EverGrandeCity_EventScript_SetLvl0
+        goto_if_eq VAR_RESULT, 1, EverGrandeCity_EventScript_SetLvl1
+        goto_if_eq VAR_RESULT, 2, EverGrandeCity_EventScript_SetLvl2
+        goto_if_eq VAR_RESULT, 3, EverGrandeCity_EventScript_SetLvl3
+        goto_if_eq VAR_RESULT, 4, EverGrandeCity_EventScript_SetLvl4
+        goto_if_eq VAR_RESULT, 5, EverGrandeCity_EventScript_Back
+        end
+
+EverGrandeCity_EventScript_Lvl5:
+        multichoice 0, 0, MULTI_LIGA_LVL5, TRUE
+        goto_if_eq VAR_RESULT, 0, EverGrandeCity_EventScript_SetLvl0
+        goto_if_eq VAR_RESULT, 1, EverGrandeCity_EventScript_SetLvl1
+        goto_if_eq VAR_RESULT, 2, EverGrandeCity_EventScript_SetLvl2
+        goto_if_eq VAR_RESULT, 3, EverGrandeCity_EventScript_SetLvl3
+        goto_if_eq VAR_RESULT, 4, EverGrandeCity_EventScript_SetLvl4
+        goto_if_eq VAR_RESULT, 5, EverGrandeCity_EventScript_SetLvl5
+        goto_if_eq VAR_RESULT, 6, EverGrandeCity_EventScript_Back
+        end
+
+EverGrandeCity_EventScript_SetLvl0:
+        setvar VAR_LIGA_REMATCH, 0
+	setflag FLAG_HIDE_CHAMPIONS_ROOM_TROY
+        clearflag FLAG_HIDE_CHAMPIONS_ROOM_WASSILI
+        goto EverGrandeCity_EventScript_End
+
+EverGrandeCity_EventScript_SetLvl1:
+        setvar VAR_LIGA_REMATCH, 1
+	setflag FLAG_HIDE_CHAMPIONS_ROOM_TROY
+        clearflag FLAG_HIDE_CHAMPIONS_ROOM_WASSILI
+        goto EverGrandeCity_EventScript_End
+
+EverGrandeCity_EventScript_SetLvl2:
+        setvar VAR_LIGA_REMATCH, 2
+	setflag FLAG_HIDE_CHAMPIONS_ROOM_TROY
+        clearflag FLAG_HIDE_CHAMPIONS_ROOM_WASSILI
+        goto EverGrandeCity_EventScript_End
+
+EverGrandeCity_EventScript_SetLvl3:
+        setvar VAR_LIGA_REMATCH, 3
+	setflag FLAG_HIDE_CHAMPIONS_ROOM_TROY
+        clearflag FLAG_HIDE_CHAMPIONS_ROOM_WASSILI
+        goto EverGrandeCity_EventScript_End
+
+EverGrandeCity_EventScript_SetLvl4:
+        setvar VAR_LIGA_REMATCH, 4
+	clearflag FLAG_HIDE_CHAMPIONS_ROOM_TROY
+        setflag FLAG_HIDE_CHAMPIONS_ROOM_WASSILI
+        goto EverGrandeCity_EventScript_End
+
+EverGrandeCity_EventScript_SetLvl5:
+        setvar VAR_LIGA_REMATCH, 5
+        goto EverGrandeCity_EventScript_End
+
+EverGrandeCity_EventScript_End:
+        msgbox EverGrandeCity_Text_LevelSet, MSGBOX_DEFAULT
+        release
+        end
+
+EverGrandeCity_EventScript_Back::
+        msgbox EverGrandeCity_Text_Back, MSGBOX_DEFAULT
+        release
+        end
+
+
 EverGrandeCity_PokemonLeague_1F_Movement_MoveToFrontFromRight:
 	walk_down
 	walk_left
@@ -124,6 +230,23 @@ EverGrandeCity_PokemonLeague_1F_Movement_RightGuardOutOfWay:
 	walk_right
 	walk_in_place_faster_down
 	step_end
+
+EverGrandeCity_Text_LvlText:
+        .string "Möchtest du die Liga zu einer\p"
+        .string "Revanche herausfordern?\n"
+        .string "Welches Level möchtest du?$"
+
+EverGrandeCity_Text_NoBadges:
+        .string "Wenn du die Liga besiegt hast, kannst du\p"
+        .string "wiederkommen und die Liga\n"
+        .string "zu einer Revanche herausfordern.$"
+
+EverGrandeCity_Text_Back:
+        .string "Ok, es bleibt beim aktuellen Level.$"
+
+EverGrandeCity_Text_LevelSet:
+        .string "Dein Level wurde gesetzt!\p"
+        .string "Liga wurde zurückgesetzt!$"
 
 EverGrandeCity_PokemonLeague_1F_Text_MustHaveAllGymBadges:
 	.ifdef ENGLISH

@@ -29,9 +29,49 @@ LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs:
 	.2byte ITEM_TM_THUNDER
 	.2byte ITEM_TM_BLIZZARD
 	.2byte ITEM_TM_HYPER_BEAM
+        .2byte ITEM_TM_FOCUS_PUNCH
+        .2byte ITEM_TM_DRAGON_CLAW
+        .2byte ITEM_TM_WATER_PULSE
+        .2byte ITEM_TM_BULLET_SEED
+        .2byte ITEM_TM_HIDDEN_POWER
+        .2byte ITEM_TM_ICE_BEAM
+        .2byte ITEM_TM_GIGA_DRAIN
+        .2byte ITEM_TM_SOLAR_BEAM
+        .2byte ITEM_TM_IRON_TAIL
+        .2byte ITEM_TM_THUNDERBOLT
 	.2byte ITEM_NONE
 	release
 	end
+
+LilycoveCity_DepartmentStore_4F_EventScript_ClerkMiddle::
+        lock
+        faceplayer
+        message gText_HowMayIServeYou
+        waitmessage
+        pokemart LilycoveCity_DepartmentStore_4F_Pokemart_Stones
+        msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+        release
+        end
+
+        .align 2
+LilycoveCity_DepartmentStore_4F_Pokemart_Stones:
+        .2byte ITEM_SUN_STONE
+        .2byte ITEM_MOON_STONE
+        .2byte ITEM_FIRE_STONE
+        .2byte ITEM_THUNDER_STONE
+        .2byte ITEM_WATER_STONE
+        .2byte ITEM_LEAF_STONE
+        .2byte ITEM_METAL_COAT
+        .2byte ITEM_KINGS_ROCK
+        .2byte ITEM_UP_GRADE
+        .2byte ITEM_DRAGON_SCALE
+        .2byte ITEM_DEEP_SEA_TOOTH
+        .2byte ITEM_DEEP_SEA_SCALE
+        .2byte ITEM_TM_AERIAL_ACE
+        .2byte ITEM_TM_SECRET_POWER
+        .2byte ITEM_NONE
+        release
+        end
 
 LilycoveCity_DepartmentStore_4F_EventScript_ClerkRight::
 	lock
@@ -45,10 +85,19 @@ LilycoveCity_DepartmentStore_4F_EventScript_ClerkRight::
 
 	.align 2
 LilycoveCity_DepartmentStore_4F_Pokemart_DefenseTMs:
-	.2byte ITEM_TM_PROTECT
-	.2byte ITEM_TM_SAFEGUARD
-	.2byte ITEM_TM_REFLECT
+        .2byte ITEM_TM_THIEF
+        .2byte ITEM_TM_STEEL_WING
+        .2byte ITEM_TM_OVERHEAT
 	.2byte ITEM_TM_LIGHT_SCREEN
+        .2byte ITEM_TM_FLAMETHROWER
+        .2byte ITEM_TM_EARTHQUAKE
+        .2byte ITEM_TM_RETURN
+        .2byte ITEM_TM_DIG
+        .2byte ITEM_TM_PSYCHIC
+        .2byte ITEM_TM_SHADOW_BALL
+        .2byte ITEM_TM_BRICK_BREAK
+        .2byte ITEM_TM_SHOCK_WAVE
+        .2byte ITEM_TM_SLUDGE_BOMB
 	.2byte ITEM_NONE
 	release
 	end

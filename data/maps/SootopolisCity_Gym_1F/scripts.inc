@@ -80,6 +80,10 @@ SootopolisCity_Gym_1F_Movement_FallThroughIce:
 	step_end
 
 SootopolisCity_Gym_1F_EventScript_Juan::
+        call_if_eq VAR_GYM_REMATCH, 1, SootopolisCity_Gym_EventScript_Rematch1
+        call_if_eq VAR_GYM_REMATCH, 2, SootopolisCity_Gym_EventScript_Rematch2
+        call_if_eq VAR_GYM_REMATCH, 3, SootopolisCity_Gym_EventScript_Rematch3
+        call_if_eq VAR_GYM_REMATCH, 4, SootopolisCity_Gym_EventScript_Rematch4
 	trainerbattle_single TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanIntro, SootopolisCity_Gym_1F_Text_JuanDefeat, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_JuanRematch
@@ -88,6 +92,73 @@ SootopolisCity_Gym_1F_EventScript_Juan::
 	msgbox SootopolisCity_Gym_1F_Text_JuanPostBattle, MSGBOX_DEFAULT
 	release
 	end
+
+SootopolisCity_Gym_EventScript_Rematch1::
+        goto_if_defeated TRAINER_JUAN_2, SootopolisCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_JUAN_2, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_2, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_2, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_2, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_2, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_2, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_2, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_2, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_2, SootopolisCity_Gym_EventScript_NoRematch
+        goto SootopolisCity_Gym_EventScript_RematchWin
+
+SootopolisCity_Gym_EventScript_Rematch2::
+        goto_if_defeated TRAINER_JUAN_3, SootopolisCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_JUAN_3, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_3, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_3, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_3, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_3, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_3, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_3, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_3, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_3, SootopolisCity_Gym_EventScript_NoRematch
+        goto SootopolisCity_Gym_EventScript_RematchWin
+
+SootopolisCity_Gym_EventScript_Rematch3::
+        goto_if_defeated TRAINER_JUAN_4, SootopolisCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_JUAN_4, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_4, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_4, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_4, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_4, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_4, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_4, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_4, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_4, SootopolisCity_Gym_EventScript_NoRematch
+        goto SootopolisCity_Gym_EventScript_RematchWin
+
+SootopolisCity_Gym_EventScript_Rematch4::
+        goto_if_defeated TRAINER_JUAN_5, SootopolisCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_JUAN_5, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_5, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_5, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_5, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_5, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_5, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_5, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_5, SootopolisCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_5, SootopolisCity_Gym_EventScript_NoRematch
+        goto SootopolisCity_Gym_EventScript_RematchWin
+
+SootopolisCity_Gym_EventScript_RematchWin::
+        compare_var_to_var VAR_GYM_REMATCH, VAR_GYM_REMATCH_MAX
+        goto_if_le SootopolisCity_Gym_EventScript_NoRematch
+        compare VAR_GYM_REMATCH, 3
+        goto_if_eq SootopolisCity_Gym_EventScript_NoRematch
+        addvar VAR_GYM_REMATCH_MAX, 1
+
+
+SootopolisCity_Gym_EventScript_NoRematch::
+        faceplayer
+        msgbox SootopolisCity_Gym_1F_Text_JuanPostRematch, MSGBOX_AUTOCLOSE
+        release
+        end
+
 
 SootopolisCity_Gym_1F_EventScript_JuanDefeated::
 	message SootopolisCity_Gym_1F_Text_ReceivedRainBadge

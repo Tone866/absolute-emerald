@@ -19,6 +19,221 @@ Route103_EventScript_OpenAlteringCave::
 	setmetatile 45, 6, METATILE_General_CaveEntrance_Bottom, FALSE
 	return
 
+Route103_EventScript_Rival2::
+        checkplayergender
+        goto_if_eq VAR_RESULT, MALE, Route103_EventScript_RivalMay2
+        goto_if_eq VAR_RESULT, FEMALE, Route103_EventScript_RivalBrendan2
+        end
+
+Route103_EventScript_RivalBrendan2::
+        call_if_eq VAR_MAY_REMATCH, 1, Route103_EventScript_RivalBrendan3
+        call_if_eq VAR_MAY_REMATCH, 2, Route103_EventScript_RivalBrendan4
+        call_if_eq VAR_MAY_REMATCH, 3, Route103_EventScript_RivalBrendan5
+        switch VAR_STARTER_MON
+        case 0, Route103_EventScript_StartBrendanBattleTreecko2
+        case 1, Route103_EventScript_StartBrendanBattleTorchic2
+        case 2, Route103_EventScript_StartBrendanBattleMudkip2
+        end
+
+Route103_EventScript_StartBrendanBattleTreecko2::
+        trainerbattle_single TRAINER_BRENDAN_RED, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterBrendanBattle2, NO_MUSIC
+        end
+
+Route103_EventScript_StartBrendanBattleTorchic2::
+        trainerbattle_single TRAINER_BRENDAN_BLUE, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterBrendanBattle2, NO_MUSIC
+        end
+
+Route103_EventScript_StartBrendanBattleMudkip2::
+        trainerbattle_single TRAINER_BRENDAN_GREEN, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterBrendanBattle2, NO_MUSIC
+        end
+
+Route103_EventScript_AfterBrendanBattle2::
+        setvar VAR_MAY_REMATCH, 1
+        msgbox Route103_End, MSGBOX_DEFAULT
+	msgbox Route103_Ticket, MSGBOX_DEFAULT
+	giveitem ITEM_EON_TICKET
+        setflag FLAG_ENABLE_SHIP_SOUTHERN_ISLAND
+	release
+        end
+
+Route103_EventScript_RivalBrendan3::
+        switch VAR_STARTER_MON
+        case 0, Route103_EventScript_StartBrendanBattleTreecko3
+        case 1, Route103_EventScript_StartBrendanBattleTorchic3
+        case 2, Route103_EventScript_StartBrendanBattleMudkip3
+        end
+
+Route103_EventScript_StartBrendanBattleTreecko3::
+        trainerbattle_single TRAINER_BRENDAN_RED2, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterBrendanBattle3, NO_MUSIC
+        end
+
+Route103_EventScript_StartBrendanBattleTorchic3::
+        trainerbattle_single TRAINER_BRENDAN_BLUE2, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterBrendanBattle3, NO_MUSIC
+        end
+
+Route103_EventScript_StartBrendanBattleMudkip3::
+        trainerbattle_single TRAINER_BRENDAN_GREEN2, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterBrendanBattle3, NO_MUSIC
+        end
+
+Route103_EventScript_AfterBrendanBattle3::
+        setvar VAR_MAY_REMATCH, 2
+        msgbox Route103_End, MSGBOX_DEFAULT
+        end
+
+Route103_EventScript_RivalBrendan4::
+        switch VAR_STARTER_MON
+        case 0, Route103_EventScript_StartBrendanBattleTreecko4
+        case 1, Route103_EventScript_StartBrendanBattleTorchic4
+        case 2, Route103_EventScript_StartBrendanBattleMudkip4
+        end
+
+Route103_EventScript_StartBrendanBattleTreecko4::
+        trainerbattle_single TRAINER_BRENDAN_RED3, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterBrendanBattle4, NO_MUSIC
+        end
+
+Route103_EventScript_StartBrendanBattleTorchic4::
+        trainerbattle_single TRAINER_BRENDAN_BLUE3, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterBrendanBattle4, NO_MUSIC
+        end
+
+Route103_EventScript_StartBrendanBattleMudkip4::
+        trainerbattle_single TRAINER_BRENDAN_GREEN3, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterBrendanBattle4, NO_MUSIC
+        end
+
+Route103_EventScript_AfterBrendanBattle4::
+        setvar VAR_MAY_REMATCH, 3
+        msgbox Route103_End, MSGBOX_DEFAULT
+        end
+
+Route103_EventScript_RivalBrendan5::
+        switch VAR_STARTER_MON
+        case 0, Route103_EventScript_StartBrendanBattleTreecko5
+        case 1, Route103_EventScript_StartBrendanBattleTorchic5
+        case 2, Route103_EventScript_StartBrendanBattleMudkip5
+        end
+
+Route103_EventScript_StartBrendanBattleTreecko5::
+	cleartrainerflag TRAINER_BRENDAN_RED4
+        trainerbattle_single TRAINER_BRENDAN_RED4, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterBrendanBattle5, NO_MUSIC
+        end
+
+Route103_EventScript_StartBrendanBattleTorchic5::
+        cleartrainerflag TRAINER_BRENDAN_BLUE4
+        trainerbattle_single TRAINER_BRENDAN_BLUE4, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterBrendanBattle5, NO_MUSIC
+        end
+
+Route103_EventScript_StartBrendanBattleMudkip5::
+        cleartrainerflag TRAINER_BRENDAN_GREEN4
+        trainerbattle_single TRAINER_BRENDAN_GREEN4, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterBrendanBattle5, NO_MUSIC
+        end
+
+Route103_EventScript_AfterBrendanBattle5::
+        msgbox Route103_End, MSGBOX_DEFAULT
+        end
+
+Route103_EventScript_RivalMay2::
+        call_if_eq VAR_MAY_REMATCH, 1, Route103_EventScript_RivalMay3 
+        call_if_eq VAR_MAY_REMATCH, 2, Route103_EventScript_RivalMay4
+        call_if_eq VAR_MAY_REMATCH, 3, Route103_EventScript_RivalMay5
+        switch VAR_STARTER_MON
+        case 0, Route103_EventScript_StartMayBattleTreecko2
+        case 1, Route103_EventScript_StartMayBattleTorchic2
+        case 2, Route103_EventScript_StartMayBattleMudkip2
+	end
+
+Route103_EventScript_StartMayBattleTreecko2::
+        trainerbattle_single TRAINER_MAY_RED, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterMayBattle2, NO_MUSIC
+        end
+
+Route103_EventScript_StartMayBattleTorchic2::
+        trainerbattle_single TRAINER_MAY_BLUE, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterMayBattle2, NO_MUSIC
+        end
+
+Route103_EventScript_StartMayBattleMudkip2::
+        trainerbattle_single TRAINER_MAY_GREEN, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterMayBattle2, NO_MUSIC
+        end
+
+Route103_EventScript_AfterMayBattle2::
+	setvar VAR_MAY_REMATCH, 1
+        msgbox Route103_End, MSGBOX_DEFAULT
+        msgbox Route103_Ticket, MSGBOX_DEFAULT
+        giveitem ITEM_EON_TICKET
+	release
+        end
+
+Route103_EventScript_RivalMay3::
+        switch VAR_STARTER_MON
+        case 0, Route103_EventScript_StartMayBattleTreecko3
+        case 1, Route103_EventScript_StartMayBattleTorchic3
+        case 2, Route103_EventScript_StartMayBattleMudkip3
+        end
+
+Route103_EventScript_StartMayBattleTreecko3::
+        trainerbattle_single TRAINER_MAY_RED2, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterMayBattle3, NO_MUSIC
+        end
+
+Route103_EventScript_StartMayBattleTorchic3::
+        trainerbattle_single TRAINER_MAY_BLUE2, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterMayBattle3, NO_MUSIC
+        end
+
+Route103_EventScript_StartMayBattleMudkip3::
+        trainerbattle_single TRAINER_MAY_GREEN2, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterMayBattle3, NO_MUSIC
+        end
+
+Route103_EventScript_AfterMayBattle3::
+        msgbox Route103_End, MSGBOX_DEFAULT
+        setvar VAR_MAY_REMATCH, 2
+        end
+
+Route103_EventScript_RivalMay4::
+        switch VAR_STARTER_MON
+        case 0, Route103_EventScript_StartMayBattleTreecko4
+        case 1, Route103_EventScript_StartMayBattleTorchic4
+        case 2, Route103_EventScript_StartMayBattleMudkip4
+        end
+
+Route103_EventScript_StartMayBattleTreecko4::
+        trainerbattle_single TRAINER_MAY_RED3, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterMayBattle4, NO_MUSIC
+        end
+
+Route103_EventScript_StartMayBattleTorchic4::
+        trainerbattle_single TRAINER_MAY_BLUE3, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterMayBattle4, NO_MUSIC
+        end
+
+Route103_EventScript_StartMayBattleMudkip4::
+        trainerbattle_single TRAINER_MAY_GREEN3, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterMayBattle4, NO_MUSIC
+        end
+
+Route103_EventScript_AfterMayBattle4::
+        msgbox Route103_End, MSGBOX_DEFAULT
+        setvar VAR_MAY_REMATCH, 3
+        end
+
+Route103_EventScript_RivalMay5::
+        switch VAR_STARTER_MON
+        case 0, Route103_EventScript_StartMayBattleTreecko5
+        case 1, Route103_EventScript_StartMayBattleTorchic5
+        case 2, Route103_EventScript_StartMayBattleMudkip5
+        end
+
+Route103_EventScript_StartMayBattleTreecko5::
+	cleartrainerflag TRAINER_MAY_RED4
+        trainerbattle_single TRAINER_MAY_RED4, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterMayBattle5, NO_MUSIC
+        end
+
+Route103_EventScript_StartMayBattleTorchic5::
+        cleartrainerflag TRAINER_MAY_BLUE4
+        trainerbattle_single TRAINER_MAY_BLUE4, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterMayBattle5, NO_MUSIC
+        end
+
+Route103_EventScript_StartMayBattleMudkip5::
+        cleartrainerflag TRAINER_MAY_GREEN4
+        trainerbattle_single TRAINER_MAY_GREEN4, Route103_Text_May, Route103_Text_MayDefeated2, Route103_EventScript_AfterMayBattle5, NO_MUSIC
+        end
+
+Route103_EventScript_AfterMayBattle5::
+        msgbox Route103_End, MSGBOX_DEFAULT
+        end
+
 Route103_EventScript_Rival::
 	lockall
 	checkplayergender
@@ -288,6 +503,10 @@ Route103_EventScript_Isabelle::
 	msgbox Route103_Text_IsabellePostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route103_Ticket:
+        .string "Hier! Das möchte ich dir geben,\n"
+        .string "als Belohnung für den guten Kampf!$"
+
 Route103_Text_MayRoute103Pokemon:
 	.ifdef ENGLISH
 	.string "MAY: Let's see… The POKéMON found\n"
@@ -452,3 +671,21 @@ Route103_Text_RouteSign:
 	.string "{DOWN_ARROW} ROSALTSTADT$"
 	.endif
 	.endif
+
+Route103_Text_May:
+	.string "Ach du bist es.\n"
+	.string "Ich? Ach ich denke nur nach und\p"
+	.string "genieße die Ruhe.\l"
+	.string "Komm lass und kämpfen, wie früher!\n"
+	.string "Ich will sehen wie stark du geworden\l"
+	.string "bist!$"
+
+Route103_Text_MayDefeated2:
+        .string "Ein schöner Kampf!\n"
+	.string "Du bist nicht umsonst der CHAMP!$"
+
+Route103_End:
+        .string "Das hat Spaß gemacht!\n"
+	.string "Du bist noch ganz der Alte!\p"
+        .string "Was die Zukunft wohl noch für uns\l"
+        .string "bereit hält?$"

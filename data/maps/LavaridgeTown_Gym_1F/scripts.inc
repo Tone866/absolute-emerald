@@ -49,6 +49,10 @@ LavaridgeTown_Gym_1F_EventScript_EndCheckBuryTrainers::
 	return
 
 LavaridgeTown_Gym_1F_EventScript_Flannery::
+        call_if_eq VAR_GYM_REMATCH, 1, LavaridgeTown_Gym_EventScript_Rematch1
+        call_if_eq VAR_GYM_REMATCH, 2, LavaridgeTown_Gym_EventScript_Rematch2
+        call_if_eq VAR_GYM_REMATCH, 3, LavaridgeTown_Gym_EventScript_Rematch3
+        call_if_eq VAR_GYM_REMATCH, 4, LavaridgeTown_Gym_EventScript_Rematch4
 	trainerbattle_single TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryIntro, LavaridgeTown_Gym_1F_Text_FlanneryDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_Gym_1F_EventScript_FlanneryRematch
@@ -56,6 +60,73 @@ LavaridgeTown_Gym_1F_EventScript_Flannery::
 	msgbox LavaridgeTown_Gym_1F_Text_FlanneryPostBattle, MSGBOX_DEFAULT
 	release
 	end
+
+LavaridgeTown_Gym_EventScript_Rematch1::
+        goto_if_defeated TRAINER_FLANNERY_2, LavaridgeTown_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_FLANNERY_2, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_2, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_2, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_2, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_2, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_2, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_2, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_2, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_2, LavaridgeTown_Gym_EventScript_NoRematch
+        goto LavaridgeTown_Gym_EventScript_RematchWin
+
+LavaridgeTown_Gym_EventScript_Rematch2::
+        goto_if_defeated TRAINER_FLANNERY_3, LavaridgeTown_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_FLANNERY_3, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_3, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_3, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_3, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_3, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_3, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_3, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_3, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_3, LavaridgeTown_Gym_EventScript_NoRematch
+        goto LavaridgeTown_Gym_EventScript_RematchWin
+
+LavaridgeTown_Gym_EventScript_Rematch3::
+        goto_if_defeated TRAINER_FLANNERY_4, LavaridgeTown_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_FLANNERY_4, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_4, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_4, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_4, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_4, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_4, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_4, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_4, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_4, LavaridgeTown_Gym_EventScript_NoRematch
+        goto LavaridgeTown_Gym_EventScript_RematchWin
+
+LavaridgeTown_Gym_EventScript_Rematch4::
+        goto_if_defeated TRAINER_FLANNERY_5, LavaridgeTown_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_FLANNERY_5, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_5, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_5, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_5, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_5, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_5, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_5, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_5, LavaridgeTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_5, LavaridgeTown_Gym_EventScript_NoRematch
+        goto LavaridgeTown_Gym_EventScript_RematchWin
+
+LavaridgeTown_Gym_EventScript_RematchWin::
+        compare_var_to_var VAR_GYM_REMATCH, VAR_GYM_REMATCH_MAX
+        goto_if_le LavaridgeTown_Gym_EventScript_NoRematch
+        compare VAR_GYM_REMATCH, 3
+        goto_if_eq LavaridgeTown_Gym_EventScript_NoRematch
+        addvar VAR_GYM_REMATCH_MAX, 1
+
+
+LavaridgeTown_Gym_EventScript_NoRematch::
+        faceplayer
+        msgbox LavaridgeTown_Gym_1F_Text_FlanneryPostRematch, MSGBOX_AUTOCLOSE
+        release
+        end
+
 
 LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated::
 	message LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge

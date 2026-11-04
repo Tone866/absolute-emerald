@@ -84,16 +84,42 @@ VictoryRoad_1F_EventScript_EntranceWally::
 
 @ This Wally appears and remains at the exit after the Hall of Fame is entered
 VictoryRoad_1F_EventScript_ExitWally::
-	trainerbattle_single TRAINER_WALLY_VR_2, VictoryRoad_1F_Text_WallyIntro, VictoryRoad_1F_Text_WallyDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, VictoryRoad_1F_EventScript_RematchWally
-	msgbox VictoryRoad_1F_Text_WallyPostBattle, MSGBOX_AUTOCLOSE
+        call_if_eq VAR_HEIKO_REMATCH, 1, VictoryRoad_1F_EventScript_ExitWally2
+        call_if_eq VAR_HEIKO_REMATCH, 2, VictoryRoad_1F_EventScript_ExitWally3
+        call_if_eq VAR_HEIKO_REMATCH, 3, VictoryRoad_1F_EventScript_ExitWally4
+	trainerbattle_single TRAINER_WALLY_VR_2, VictoryRoad_1F_Text_WallyIntro, VictoryRoad_1F_Text_WallyDefeat, VictoryRoad_1F_WallyDefeat
 	end
 
-VictoryRoad_1F_EventScript_RematchWally::
-	trainerbattle_rematch TRAINER_WALLY_VR_2, VictoryRoad_1F_Text_WallyIntro, VictoryRoad_1F_Text_WallyDefeat
+VictoryRoad_1F_WallyDefeat:
+        setvar VAR_HEIKO_REMATCH, 1
 	msgbox VictoryRoad_1F_Text_WallyPostBattle, MSGBOX_AUTOCLOSE
+	msgbox VictoryRoad_1F_Text_Jirachi, MSGBOX_AUTOCLOSE
+        givemon SPECIES_JIRACHI, 15
 	end
+
+VictoryRoad_1F_EventScript_ExitWally2::
+        trainerbattle_single TRAINER_WALLY_VR_3, VictoryRoad_1F_Text_WallyIntro, VictoryRoad_1F_Text_WallyDefeat, VictoryRoad_1F_WallyDefeat2
+	end
+VictoryRoad_1F_WallyDefeat2:
+        setvar VAR_HEIKO_REMATCH, 2
+        msgbox VictoryRoad_1F_Text_WallyPostBattle, MSGBOX_AUTOCLOSE
+        end
+
+VictoryRoad_1F_EventScript_ExitWally3::
+        trainerbattle_single TRAINER_WALLY_VR_4, VictoryRoad_1F_Text_WallyIntro, VictoryRoad_1F_Text_WallyDefeat, VictoryRoad_1F_WallyDefeat3
+	end
+VictoryRoad_1F_WallyDefeat3:
+        setvar VAR_HEIKO_REMATCH, 3
+        msgbox VictoryRoad_1F_Text_WallyPostBattle, MSGBOX_AUTOCLOSE
+        end
+
+VictoryRoad_1F_EventScript_ExitWally4::
+	cleartrainerflag TRAINER_WALLY_VR_5
+        trainerbattle_single TRAINER_WALLY_VR_5, VictoryRoad_1F_Text_WallyIntro, VictoryRoad_1F_Text_WallyDefeat, VictoryRoad_1F_WallyDefeat4
+	end
+VictoryRoad_1F_WallyDefeat4:
+        msgbox VictoryRoad_1F_Text_WallyPostBattle, MSGBOX_AUTOCLOSE
+        end
 
 VictoryRoad_1F_EventScript_Edgar::
 	trainerbattle_single TRAINER_EDGAR, VictoryRoad_1F_Text_EdgarIntro, VictoryRoad_1F_Text_EdgarDefeat
@@ -382,3 +408,9 @@ VictoryRoad_1F_Text_KatelynnPostBattle:
 	.string "Mir doch egal…$"
 	.endif
 	.endif
+
+VictoryRoad_1F_Text_Jirachi:
+	.string "Ich möchte dir dieses Pokemon\n" 
+	.string "schenken! Es tauchte auf, als ich\l"
+	.string "gerade an dich dachte.\p"
+	.string "Ich denke es passt mehr zu dir!$"

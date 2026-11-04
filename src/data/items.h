@@ -1470,7 +1470,7 @@ const struct Item gItems[] =
         .name = _("MONDSTEIN"),
 #endif
         .itemId = ITEM_MOON_STONE,
-        .price = 0,
+        .price = 2100,
         .description = sMoonStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,

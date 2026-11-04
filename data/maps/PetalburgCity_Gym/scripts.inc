@@ -372,6 +372,10 @@ PetalburgCity_Gym_EventScript_GiveEnigmaBerry::
 	end
 
 PetalburgCity_Gym_EventScript_NormanBattle::
+        call_if_eq VAR_GYM_REMATCH, 1, PetalburgTown_Gym_EventScript_Rematch1
+        call_if_eq VAR_GYM_REMATCH, 2, PetalburgTown_Gym_EventScript_Rematch2
+        call_if_eq VAR_GYM_REMATCH, 3, PetalburgTown_Gym_EventScript_Rematch3
+        call_if_eq VAR_GYM_REMATCH, 4, PetalburgTown_Gym_EventScript_Rematch4
 	msgbox PetalburgCity_Gym_Text_NormanIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_NORMAN_1, PetalburgCity_Gym_Text_NormanDefeat
 	message PetalburgCity_Gym_Text_ReceivedBalanceBadge
@@ -403,6 +407,73 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	case DIR_WEST, PetalburgCity_Gym_EventScript_WallysDadArrivesWest
 	case DIR_EAST, PetalburgCity_Gym_EventScript_WallysDadArrivesEast
 	end
+
+PetalburgTown_Gym_EventScript_Rematch1::
+        goto_if_defeated TRAINER_NORMAN_2, PetalburgTown_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_NORMAN_2, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_2, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_2, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_2, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_2, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_2, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_2, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_2, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_2, PetalburgTown_Gym_EventScript_NoRematch
+        goto PetalburgTown_Gym_EventScript_RematchWin
+
+PetalburgTown_Gym_EventScript_Rematch2::
+        goto_if_defeated TRAINER_NORMAN_3, PetalburgTown_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_NORMAN_3, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_3, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_3, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_3, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_3, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_3, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_3, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_3, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_3, PetalburgTown_Gym_EventScript_NoRematch
+        goto PetalburgTown_Gym_EventScript_RematchWin
+
+PetalburgTown_Gym_EventScript_Rematch3::
+        goto_if_defeated TRAINER_NORMAN_4, PetalburgTown_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_NORMAN_4, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_4, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_4, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_4, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_4, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_4, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_4, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_4, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_4, PetalburgTown_Gym_EventScript_NoRematch
+        goto PetalburgTown_Gym_EventScript_RematchWin
+
+PetalburgTown_Gym_EventScript_Rematch4::
+        goto_if_defeated TRAINER_NORMAN_5, PetalburgTown_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_NORMAN_5, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_5, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_5, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_5, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_5, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_5, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_5, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_5, PetalburgTown_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_5, PetalburgTown_Gym_EventScript_NoRematch
+        goto PetalburgTown_Gym_EventScript_RematchWin
+
+PetalburgTown_Gym_EventScript_RematchWin::
+        compare_var_to_var VAR_GYM_REMATCH, VAR_GYM_REMATCH_MAX
+        goto_if_le PetalburgTown_Gym_EventScript_NoRematch
+        compare VAR_GYM_REMATCH, 3
+        goto_if_eq PetalburgTown_Gym_EventScript_NoRematch
+        addvar VAR_GYM_REMATCH_MAX, 1
+
+
+PetalburgTown_Gym_EventScript_NoRematch::
+        faceplayer
+        msgbox PetalburgCity_Gym_Text_NormanPostRematch, MSGBOX_AUTOCLOSE
+        release
+        end
+
 
 PetalburgCity_Gym_EventScript_GiveFacade::
 	giveitem ITEM_TM_FACADE

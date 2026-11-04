@@ -3036,6 +3036,16 @@ extern const u8 gText_BoxName[];
 extern const u8 gText_PkmnsNickname[];
 extern const u8 gText_TellHimTheWords[];
 
+extern const u8 gText_Lv0[];
+extern const u8 gText_Lv1[];
+extern const u8 gText_Lv2[];
+extern const u8 gText_Lv3[];
+extern const u8 gText_Lv4[];
+extern const u8 gText_Lv5[];
+extern const u8 gText_Lv6[];
+extern const u8 gText_Lv7[];
+extern const u8 gText_Lv8[];
+
 #if GERMAN
 extern const u8 gText_SchoolKid[];
 extern const u8 gText_PkmnTrainer[];

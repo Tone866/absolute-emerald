@@ -25,6 +25,49 @@ BattleFrontier_OutsideEast_EventScript_ShowSudowoodo::
 	clearflag FLAG_HIDE_BATTLE_FRONTIER_SUDOWOODO
 	return
 
+BattleFrontier_OutsideEast_EventScript_Gold::
+        call_if_eq VAR_GOLD_REMATCH, 1, BattleFrontier_OutsideEast_EventScript_Gold1
+        call_if_eq VAR_GOLD_REMATCH, 2, BattleFrontier_OutsideEast_EventScript_Gold2
+        call_if_eq VAR_GOLD_REMATCH, 3, BattleFrontier_OutsideEast_EventScript_Gold3
+        trainerbattle_single TRAINER_GOLD, BattleFrontier_OutsideEastGoldIntro, BattleFrontier_OutsideEastGoldOutro, BattleFrontier_OutsideEastGoldDefeated, NO_MUSIC
+	end
+BattleFrontier_OutsideEastGoldDefeated:
+        setvar VAR_GOLD_REMATCH, 1
+        msgbox BattleFrontier_End, MSGBOX_DEFAULT
+	msgbox BattleFrontier_Ticket, MSGBOX_DEFAULT
+	giveitem ITEM_MYSTIC_TICKET
+        setflag FLAG_ENABLE_SHIP_NAVEL_ROCK
+        release
+        end
+
+BattleFrontier_OutsideEast_EventScript_Gold1:
+        trainerbattle_single TRAINER_GOLD_2, BattleFrontier_OutsideEastGoldIntro, BattleFrontier_OutsideEastGoldOutro, BattleFrontier_OutsideEastGoldDefeated1, NO_MUSIC
+	end
+BattleFrontier_OutsideEastGoldDefeated1:
+        setvar VAR_GOLD_REMATCH, 2
+        msgbox BattleFrontier_End, MSGBOX_DEFAULT
+        release
+        end
+
+BattleFrontier_OutsideEast_EventScript_Gold2:
+        trainerbattle_single TRAINER_GOLD_3, BattleFrontier_OutsideEastGoldIntro, BattleFrontier_OutsideEastGoldOutro, BattleFrontier_OutsideEastGoldDefeated2, NO_MUSIC
+	end
+BattleFrontier_OutsideEastGoldDefeated2:
+        setvar VAR_GOLD_REMATCH, 3
+        msgbox BattleFrontier_End, MSGBOX_DEFAULT
+        release
+        end
+
+BattleFrontier_OutsideEast_EventScript_Gold3:
+	cleartrainerflag TRAINER_GOLD_4
+        trainerbattle_single TRAINER_GOLD_4, BattleFrontier_OutsideEastGoldIntro, BattleFrontier_OutsideEastGoldOutro, BattleFrontier_OutsideEastGoldDefeated3, NO_MUSIC
+        end
+
+BattleFrontier_OutsideEastGoldDefeated3::
+        msgbox BattleFrontier_End, MSGBOX_DEFAULT
+        release
+        end
+
 BattleFrontier_OutsideEast_EventScript_BattleTowerSign::
 	msgbox BattleFrontier_OutsideEast_Text_BattleTowerSign, MSGBOX_SIGN
 	end
@@ -232,6 +275,16 @@ BattleFrontier_OutsideEast_EventScript_OldWomanSudowoodoGone::
 BattleFrontier_OutsideEast_EventScript_Camper::
 	msgbox BattleFrontier_OutsideEast_Text_StickyMonWithLongTail, MSGBOX_NPC
 	end
+
+BattleFrontier_OutsideEastGoldIntro:
+        .string "Hey! Ich bin von weit her\n"
+        .string "gereist um die Kampfzone zu\l"
+	.string	"erkunden!\l"
+	.string "Willst du kämpfen?$"
+
+BattleFrontier_OutsideEastGoldOutro:
+        .string "Du hast gut gekämpft!\n"
+	.string "Ich werde weiter traineren!$"
 
 BattleFrontier_OutsideEast_Text_BattleTowerSign:
 	.ifdef ENGLISH
@@ -754,3 +807,12 @@ BattleFrontier_OutsideEast_Text_StickyMonWithLongTail:
 	.string "versteckt und starrte mich an!$"
 	.endif
 	.endif
+
+BattleFrontier_Ticket:
+	.string "Hier! Das möchte ich dir geben,\n"
+	.string "als Belohnung für deinen Sieg!$"
+
+BattleFrontier_End:
+        .string "Wow! Du bist wirklich stark!\n"
+        .string "Du solltest unbedingt mal JOHTO\l"
+	.string "besuchen!$"

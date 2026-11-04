@@ -911,7 +911,8 @@ static bool8 TryProduceOrHatchEgg(struct DayCare *daycare)
             if (eggCycles != 0)
             {
                 if (eggCycles >= toSub)
-                    eggCycles -= toSub;
+//                    eggCycles -= toSub;
+		    eggCycles -= 10;
                 else
                     eggCycles -= 1;
 

@@ -857,11 +857,64 @@
 #define TRAINER_BRENDAN_PLACEHOLDER         853
 #define TRAINER_MAY_PLACEHOLDER             854
 
+#define TRAINER_SIDNEY_2		    855
+#define TRAINER_SIDNEY_3                    856
+#define TRAINER_SIDNEY_4                    857
+#define TRAINER_SIDNEY_5                    858
+#define TRAINER_PHOEBE_2                    859
+#define TRAINER_PHOEBE_3                    860
+#define TRAINER_PHOEBE_4                    861
+#define TRAINER_PHOEBE_5                    862
+#define TRAINER_GLACIA_2                    863
+#define TRAINER_GLACIA_3                    864
+#define TRAINER_GLACIA_4                    865
+#define TRAINER_GLACIA_5                    866
+#define TRAINER_DRAKE_2                     867
+#define TRAINER_DRAKE_3                     868
+#define TRAINER_DRAKE_4                     869
+#define TRAINER_DRAKE_5                     870
+#define TRAINER_WALLACE_2                   871
+#define TRAINER_WALLACE_3                   872
+#define TRAINER_WALLACE_4                   873
+#define TRAINER_STEVEN_2                    874
+#define TRAINER_STEVEN_3                    875
+#define TRAINER_STEVEN_4                    876
+#define TRAINER_STEVEN_5                    877
+#define TRAINER_RED_2			    878
+#define TRAINER_RED_3                       879
+#define TRAINER_GOLD                        880
+#define TRAINER_GOLD_2                      881
+#define TRAINER_GOLD_3                      882
+#define TRAINER_GOLD_4                      883
+#define TRAINER_MAY_RED                     884
+#define TRAINER_MAY_RED2                    885
+#define TRAINER_MAY_RED3                    886
+#define TRAINER_MAY_RED4                    887
+#define TRAINER_MAY_GREEN                   888
+#define TRAINER_MAY_GREEN2                  889
+#define TRAINER_MAY_GREEN3                  890
+#define TRAINER_MAY_GREEN4                  891
+#define TRAINER_MAY_BLUE                    892
+#define TRAINER_MAY_BLUE2                   893
+#define TRAINER_MAY_BLUE3                   894
+#define TRAINER_MAY_BLUE4                   895
+#define TRAINER_BRENDAN_RED                 896
+#define TRAINER_BRENDAN_RED2                897
+#define TRAINER_BRENDAN_RED3                898
+#define TRAINER_BRENDAN_RED4                899
+#define TRAINER_BRENDAN_GREEN               900
+#define TRAINER_BRENDAN_GREEN2              901
+#define TRAINER_BRENDAN_GREEN3              902
+#define TRAINER_BRENDAN_GREEN4              903
+#define TRAINER_BRENDAN_BLUE                904
+#define TRAINER_BRENDAN_BLUE2               905
+#define TRAINER_BRENDAN_BLUE3               906
+#define TRAINER_BRENDAN_BLUE4               907
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      855
-#define MAX_TRAINERS_COUNT                  864
+#define TRAINERS_COUNT                      908
+#define MAX_TRAINERS_COUNT                  909
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

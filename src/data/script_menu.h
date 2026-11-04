@@ -54,6 +54,92 @@ static const struct MenuAction MultichoiceList_RegisterMenu[] =
     {gText_Cancel2},
 };
 
+static const struct MenuAction MultichoiceList_GymRematch[] =
+{
+    {gText_Lv1},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_GymRematch2[] =
+{
+    {gText_Lv1},
+    {gText_Lv2},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_GymRematch3[] =
+{
+    {gText_Lv1},
+    {gText_Lv2},
+    {gText_Lv3},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_GymRematch4[] =
+{
+    {gText_Lv1},
+    {gText_Lv2},
+    {gText_Lv3},
+    {gText_Lv4},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_GymRematch5[] =
+{
+    {gText_Lv1},
+    {gText_Lv2},
+    {gText_Lv3},
+    {gText_Lv4},
+    {gText_Lv5},
+    {gText_Exit},
+};
+
+
+static const struct MenuAction MultichoiceList_LigaRematch[] =
+{
+    {gText_Lv0},
+    {gText_Lv1},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_LigaRematch2[] =
+{
+    {gText_Lv0},
+    {gText_Lv1},
+    {gText_Lv2},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_LigaRematch3[] =
+{
+    {gText_Lv0},
+    {gText_Lv1},
+    {gText_Lv2},
+    {gText_Lv3},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_LigaRematch4[] =
+{
+    {gText_Lv0},
+    {gText_Lv1},
+    {gText_Lv2},
+    {gText_Lv3},
+    {gText_Lv4},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_LigaRematch5[] =
+{
+    {gText_Lv0},
+    {gText_Lv1},
+    {gText_Lv2},
+    {gText_Lv3},
+    {gText_Lv4},
+    {gText_Lv5},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_Bike[] =
 {
     {gText_Mach},
@@ -793,20 +879,26 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_BASE_PC_WITH_REGISTRY]      = MULTICHOICE(MultichoiceList_BasePCWithRegistry),
     [MULTI_REGISTER_MENU]              = MULTICHOICE(MultichoiceList_RegisterMenu),
     [MULTI_SSTIDAL_LILYCOVE]           = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_UNUSED_9]                   = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_UNUSED_10]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_GYM_LVL1]                   = MULTICHOICE(MultichoiceList_GymRematch),
+    [MULTI_LIGA_LVL1]                  = MULTICHOICE(MultichoiceList_LigaRematch),
+//    [MULTI_UNUSED_9]                   = MULTICHOICE(MultichoiceList_Exit),
+//    [MULTI_UNUSED_10]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_FRONTIER_PASS_INFO]         = MULTICHOICE(MultichoiceList_FrontierPassInfo),
     [MULTI_BIKE]                       = MULTICHOICE(MultichoiceList_Bike),
     [MULTI_STATUS_INFO]                = MULTICHOICE(MultichoiceList_StatusInfo),
     [MULTI_BRINEY_OFF_DEWFORD]         = MULTICHOICE(MultichoiceList_BrineyOffDewford),
-    [MULTI_UNUSED_15]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_GYM_LVL2]                   = MULTICHOICE(MultichoiceList_GymRematch2),
+//    [MULTI_UNUSED_15]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_VIEWED_PAINTINGS]           = MULTICHOICE(MultichoiceList_ViewedPaintings),
     [MULTI_YESNOINFO]                  = MULTICHOICE(MultichoiceList_YesNoInfo),
     [MULTI_BATTLE_MODE]                = MULTICHOICE(MultichoiceList_BattleMode),
-    [MULTI_UNUSED_19]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_GYM_LVL3]                   = MULTICHOICE(MultichoiceList_GymRematch3),
+//    [MULTI_UNUSED_19]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_YESNOINFO_2]                = MULTICHOICE(MultichoiceList_YesNoInfo2),
-    [MULTI_UNUSED_21]                  = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_UNUSED_22]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_GYM_LVL4]                   = MULTICHOICE(MultichoiceList_GymRematch4),
+    [MULTI_GYM_LVL5]                   = MULTICHOICE(MultichoiceList_GymRematch5),
+//    [MULTI_UNUSED_21]                  = MULTICHOICE(MultichoiceList_Exit),
+//    [MULTI_UNUSED_22]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_CHALLENGEINFO]              = MULTICHOICE(MultichoiceList_ChallengeInfo),
     [MULTI_LEVEL_MODE]                 = MULTICHOICE(MultichoiceList_LevelMode),
     [MULTI_MECHADOLL1_Q1]              = MULTICHOICE(MultichoiceList_Mechadoll1_Q1),
@@ -824,18 +916,22 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_MECHADOLL5_Q1]              = MULTICHOICE(MultichoiceList_Mechadoll5_Q1),
     [MULTI_MECHADOLL5_Q2]              = MULTICHOICE(MultichoiceList_Mechadoll5_Q2),
     [MULTI_MECHADOLL5_Q3]              = MULTICHOICE(MultichoiceList_Mechadoll5_Q3),
-    [MULTI_UNUSED_40]                  = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_UNUSED_41]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_LIGA_LVL2]                  = MULTICHOICE(MultichoiceList_LigaRematch2),
+    [MULTI_LIGA_LVL3]                  = MULTICHOICE(MultichoiceList_LigaRematch3),
+//    [MULTI_UNUSED_40]                  = MULTICHOICE(MultichoiceList_Exit),
+//    [MULTI_UNUSED_41]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_VENDING_MACHINE]            = MULTICHOICE(MultichoiceList_VendingMachine),
     [MULTI_MACH_BIKE_INFO]             = MULTICHOICE(MultichoiceList_MachBikeInfo),
     [MULTI_ACRO_BIKE_INFO]             = MULTICHOICE(MultichoiceList_AcroBikeInfo),
     [MULTI_SATISFACTION]               = MULTICHOICE(MultichoiceList_Satisfaction),
     [MULTI_STERN_DEEPSEA]              = MULTICHOICE(MultichoiceList_SternDeepSea),
-    [MULTI_UNUSED_ASH_VENDOR]          = MULTICHOICE(MultichoiceList_UnusedAshVendor),
+    [MULTI_LIGA_LVL4]                  = MULTICHOICE(MultichoiceList_LigaRematch4),
+//    [MULTI_UNUSED_ASH_VENDOR]          = MULTICHOICE(MultichoiceList_UnusedAshVendor),
     [MULTI_GAME_CORNER_DOLLS]          = MULTICHOICE(MultichoiceList_GameCornerDolls),
     [MULTI_GAME_CORNER_COINS]          = MULTICHOICE(MultichoiceList_GameCornerCoins),
     [MULTI_HOWS_FISHING]               = MULTICHOICE(MultichoiceList_HowsFishing),
-    [MULTI_UNUSED_51]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_LIGA_LVL5]                  = MULTICHOICE(MultichoiceList_LigaRematch5),
+//    [MULTI_UNUSED_51]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_SSTIDAL_SLATEPORT_WITH_BF]  = MULTICHOICE(MultichoiceList_SSTidalSlateportWithBF),
     [MULTI_SSTIDAL_BATTLE_FRONTIER]    = MULTICHOICE(MultichoiceList_SSTidalBattleFrontier),
     [MULTI_RIGHTLEFT]                  = MULTICHOICE(MultichoiceList_RightLeft),

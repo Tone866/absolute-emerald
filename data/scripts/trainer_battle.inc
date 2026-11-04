@@ -19,7 +19,16 @@ EventScript_TryDoNormalTrainerBattle::
 	goto EventScript_ShowTrainerIntroMsg
 
 EventScript_NoNormalTrainerBattle::
+	msgbox Rematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, EventScript_ShowTrainerIntroNoMsg
 	gotopostbattlescript
+
+EventScript_ShowTrainerIntroNoMsg::
+	special TryPrepareSecondApproachingTrainer
+	goto_if_eq VAR_RESULT, TRUE, EventScript_TrainerApproach
+	goto EventScript_DoTrainerBattle
+Rematch:
+	.string "Willst du eine Revanche?$"
 
 EventScript_TryDoDoubleTrainerBattle::
 	lock
@@ -41,6 +50,8 @@ EventScript_NotEnoughMonsForDoubleBattle::
 	end
 
 EventScript_NoDoubleTrainerBattle::
+        msgbox Rematch, MSGBOX_YESNO
+        goto_if_eq VAR_RESULT, YES, EventScript_ShowTrainerIntroNoMsg
 	gotopostbattlescript
 
 EventScript_DoNoIntroTrainerBattle::

@@ -447,7 +447,8 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_KYOGRE_REFLECTION       0x1117
 #define OBJ_EVENT_PAL_TAG_GROUDON                 0x1118
 #define OBJ_EVENT_PAL_TAG_GROUDON_REFLECTION      0x1119
-#define OBJ_EVENT_PAL_TAG_UNUSED                  0x111A
+#define OBJ_EVENT_PAL_TAG_GOLD                    0x111A
+//#define OBJ_EVENT_PAL_TAG_UNUSED                  0x111A
 #define OBJ_EVENT_PAL_TAG_SUBMARINE_SHADOW        0x111B
 #define OBJ_EVENT_PAL_TAG_POOCHYENA               0x111C
 #define OBJ_EVENT_PAL_TAG_RED_LEAF                0x111D
@@ -503,6 +504,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Lugia,                 OBJ_EVENT_PAL_TAG_LUGIA},
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
+    {gObjectEventPal_Gold,                  OBJ_EVENT_PAL_TAG_GOLD},
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else

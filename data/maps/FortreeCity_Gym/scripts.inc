@@ -17,6 +17,10 @@ FortreeCity_Gym_EventScript_InitRotatingGates::
 	end
 
 FortreeCity_Gym_EventScript_Winona::
+        call_if_eq VAR_GYM_REMATCH, 1, FortreeCity_Gym_EventScript_Rematch1
+        call_if_eq VAR_GYM_REMATCH, 2, FortreeCity_Gym_EventScript_Rematch2
+        call_if_eq VAR_GYM_REMATCH, 3, FortreeCity_Gym_EventScript_Rematch3
+        call_if_eq VAR_GYM_REMATCH, 4, FortreeCity_Gym_EventScript_Rematch4
 	trainerbattle_single TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaIntro, FortreeCity_Gym_Text_WinonaDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_WinonaRematch
@@ -24,6 +28,73 @@ FortreeCity_Gym_EventScript_Winona::
 	msgbox FortreeCity_Gym_Text_WinonaPostBattle, MSGBOX_DEFAULT
 	release
 	end
+
+FortreeCity_Gym_EventScript_Rematch1::
+        goto_if_defeated TRAINER_WINONA_2, FortreeCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_WINONA_2, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_2, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_2, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_2, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_2, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_2, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_2, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_2, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_2, FortreeCity_Gym_EventScript_NoRematch
+        goto FortreeCity_Gym_EventScript_RematchWin
+
+FortreeCity_Gym_EventScript_Rematch2::
+        goto_if_defeated TRAINER_WINONA_3, FortreeCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_WINONA_3, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_3, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_3, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_3, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_3, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_3, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_3, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_3, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_3, FortreeCity_Gym_EventScript_NoRematch
+        goto FortreeCity_Gym_EventScript_RematchWin
+
+FortreeCity_Gym_EventScript_Rematch3::
+        goto_if_defeated TRAINER_WINONA_4, FortreeCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_WINONA_4, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_4, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_4, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_4, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_4, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_4, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_4, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_4, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_4, FortreeCity_Gym_EventScript_NoRematch
+        goto FortreeCity_Gym_EventScript_RematchWin
+
+FortreeCity_Gym_EventScript_Rematch4::
+        goto_if_defeated TRAINER_WINONA_5, FortreeCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_WINONA_5, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_5, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_5, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_5, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_5, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_5, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_5, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_5, FortreeCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_5, FortreeCity_Gym_EventScript_NoRematch
+        goto FortreeCity_Gym_EventScript_RematchWin
+
+FortreeCity_Gym_EventScript_RematchWin::
+        compare_var_to_var VAR_GYM_REMATCH, VAR_GYM_REMATCH_MAX
+        goto_if_le FortreeCity_Gym_EventScript_NoRematch
+        compare VAR_GYM_REMATCH, 3
+        goto_if_eq FortreeCity_Gym_EventScript_NoRematch
+        addvar VAR_GYM_REMATCH_MAX, 1
+
+
+FortreeCity_Gym_EventScript_NoRematch::
+        faceplayer
+        msgbox FortreeCity_Gym_Text_WinonaPostRematch, MSGBOX_AUTOCLOSE
+        release
+        end
+
 
 FortreeCity_Gym_EventScript_WinonaDefeated::
 	message FortreeCity_Gym_Text_ReceivedFeatherBadge

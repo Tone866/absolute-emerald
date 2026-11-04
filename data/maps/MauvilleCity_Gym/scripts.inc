@@ -74,6 +74,10 @@ MauvilleCity_Gym_EventScript_DeactivatePuzzle::
 	end
 
 MauvilleCity_Gym_EventScript_Wattson::
+        call_if_eq VAR_GYM_REMATCH, 1, MauvilleCity_Gym_EventScript_Rematch1
+        call_if_eq VAR_GYM_REMATCH, 2, MauvilleCity_Gym_EventScript_Rematch2
+        call_if_eq VAR_GYM_REMATCH, 3, MauvilleCity_Gym_EventScript_Rematch3
+        call_if_eq VAR_GYM_REMATCH, 4, MauvilleCity_Gym_EventScript_Rematch4
 	trainerbattle_single TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonIntro, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_WattsonRematch
@@ -82,6 +86,72 @@ MauvilleCity_Gym_EventScript_Wattson::
 	msgbox MauvilleCity_Gym_Text_WattsonPostBattle, MSGBOX_DEFAULT
 	release
 	end
+
+MauvilleCity_Gym_EventScript_Rematch1::
+        goto_if_defeated TRAINER_WATTSON_2, MauvilleCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_WATTSON_2, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_2, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_2, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_2, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_2, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_2, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_2, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_2, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_2, MauvilleCity_Gym_EventScript_NoRematch
+        goto MauvilleCity_Gym_EventScript_RematchWin
+
+MauvilleCity_Gym_EventScript_Rematch2::
+        goto_if_defeated TRAINER_WATTSON_3, MauvilleCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_WATTSON_3, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_3, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_3, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_3, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_3, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_3, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_3, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_3, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_3, MauvilleCity_Gym_EventScript_NoRematch
+        goto MauvilleCity_Gym_EventScript_RematchWin
+
+MauvilleCity_Gym_EventScript_Rematch3::
+        goto_if_defeated TRAINER_WATTSON_4, MauvilleCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_WATTSON_4, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_4, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_4, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_4, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_4, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_4, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_4, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_4, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_4, MauvilleCity_Gym_EventScript_NoRematch
+        goto MauvilleCity_Gym_EventScript_RematchWin
+
+MauvilleCity_Gym_EventScript_Rematch4::
+        goto_if_defeated TRAINER_WATTSON_5, MauvilleCity_Gym_EventScript_NoRematch
+        trainerbattle_double TRAINER_WATTSON_5, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons
+        goto_if_not_defeated TRAINER_ROXANNE_5, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_BRAWLY_5, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WATTSON_5, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_FLANNERY_5, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_NORMAN_5, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_WINONA_5, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_TATE_AND_LIZA_5, MauvilleCity_Gym_EventScript_NoRematch
+        goto_if_not_defeated TRAINER_JUAN_5, MauvilleCity_Gym_EventScript_NoRematch
+        goto MauvilleCity_Gym_EventScript_RematchWin
+
+MauvilleCity_Gym_EventScript_RematchWin::
+        compare_var_to_var VAR_GYM_REMATCH, VAR_GYM_REMATCH_MAX
+        goto_if_le MauvilleCity_Gym_EventScript_NoRematch
+        compare VAR_GYM_REMATCH, 3
+        goto_if_eq MauvilleCity_Gym_EventScript_NoRematch
+        addvar VAR_GYM_REMATCH_MAX, 1
+
+
+MauvilleCity_Gym_EventScript_NoRematch::
+        faceplayer
+        msgbox MauvilleCity_Gym_Text_WattsonPostRematch, MSGBOX_AUTOCLOSE
+        release
+        end
 
 MauvilleCity_Gym_EventScript_WattsonDefeated::
 	message MauvilleCity_Gym_Text_ReceivedDynamoBadge
