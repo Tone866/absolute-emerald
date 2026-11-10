@@ -89,7 +89,8 @@ MauvilleCity_Gym_EventScript_Wattson::
 
 MauvilleCity_Gym_EventScript_Rematch1::
         goto_if_defeated TRAINER_WATTSON_2, MauvilleCity_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_WATTSON_2, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons
+        trainerbattle_double TRAINER_WATTSON_2, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons, MauvilleCity_Gym_EventScript_RematchDefeated1
+MauvilleCity_Gym_EventScript_RematchDefeated1:
         goto_if_not_defeated TRAINER_ROXANNE_2, MauvilleCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_2, MauvilleCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_2, MauvilleCity_Gym_EventScript_NoRematch
@@ -102,7 +103,8 @@ MauvilleCity_Gym_EventScript_Rematch1::
 
 MauvilleCity_Gym_EventScript_Rematch2::
         goto_if_defeated TRAINER_WATTSON_3, MauvilleCity_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_WATTSON_3, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons
+        trainerbattle_double TRAINER_WATTSON_3, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons, MauvilleCity_Gym_EventScript_RematchDefeated2
+MauvilleCity_Gym_EventScript_RematchDefeated2:
         goto_if_not_defeated TRAINER_ROXANNE_3, MauvilleCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_3, MauvilleCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_3, MauvilleCity_Gym_EventScript_NoRematch
@@ -115,7 +117,8 @@ MauvilleCity_Gym_EventScript_Rematch2::
 
 MauvilleCity_Gym_EventScript_Rematch3::
         goto_if_defeated TRAINER_WATTSON_4, MauvilleCity_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_WATTSON_4, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons
+        trainerbattle_double TRAINER_WATTSON_4, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons, MauvilleCity_Gym_EventScript_RematchDefeated3
+MauvilleCity_Gym_EventScript_RematchDefeated3:
         goto_if_not_defeated TRAINER_ROXANNE_4, MauvilleCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_4, MauvilleCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_4, MauvilleCity_Gym_EventScript_NoRematch
@@ -128,7 +131,8 @@ MauvilleCity_Gym_EventScript_Rematch3::
 
 MauvilleCity_Gym_EventScript_Rematch4::
         goto_if_defeated TRAINER_WATTSON_5, MauvilleCity_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_WATTSON_5, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons
+        trainerbattle_double TRAINER_WATTSON_5, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons, MauvilleCity_Gym_EventScript_RematchDefeated4
+MauvilleCity_Gym_EventScript_RematchDefeated4:
         goto_if_not_defeated TRAINER_ROXANNE_5, MauvilleCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_5, MauvilleCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_5, MauvilleCity_Gym_EventScript_NoRematch

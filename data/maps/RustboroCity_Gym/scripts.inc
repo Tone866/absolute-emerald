@@ -16,7 +16,8 @@ RustboroCity_Gym_EventScript_Roxanne::
 
 RustboroCity_Gym_EventScript_Rematch1::
 	goto_if_defeated TRAINER_ROXANNE_2, RustboroCity_Gym_EventScript_NoRematch
-	trainerbattle_double TRAINER_ROXANNE_2, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
+	trainerbattle_double TRAINER_ROXANNE_2, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons, RustboroCity_Gym_EventScript_RematchDefeated1
+RustboroCity_Gym_EventScript_RematchDefeated1:
 	goto_if_not_defeated TRAINER_ROXANNE_2, RustboroCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_2, RustboroCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_2, RustboroCity_Gym_EventScript_NoRematch
@@ -29,7 +30,8 @@ RustboroCity_Gym_EventScript_Rematch1::
 
 RustboroCity_Gym_EventScript_Rematch2::
         goto_if_defeated TRAINER_ROXANNE_3, RustboroCity_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_ROXANNE_3, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
+        trainerbattle_double TRAINER_ROXANNE_3, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons, RustboroCity_Gym_EventScript_RematchDefeated2
+RustboroCity_Gym_EventScript_RematchDefeated2:
         goto_if_not_defeated TRAINER_ROXANNE_3, RustboroCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_3, RustboroCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_3, RustboroCity_Gym_EventScript_NoRematch
@@ -42,7 +44,8 @@ RustboroCity_Gym_EventScript_Rematch2::
 
 RustboroCity_Gym_EventScript_Rematch3::
         goto_if_defeated TRAINER_ROXANNE_4, RustboroCity_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_ROXANNE_4, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
+        trainerbattle_double TRAINER_ROXANNE_4, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons, RustboroCity_Gym_EventScript_RematchDefeated3
+RustboroCity_Gym_EventScript_RematchDefeated3:
         goto_if_not_defeated TRAINER_ROXANNE_4, RustboroCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_4, RustboroCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_4, RustboroCity_Gym_EventScript_NoRematch
@@ -55,7 +58,8 @@ RustboroCity_Gym_EventScript_Rematch3::
 
 RustboroCity_Gym_EventScript_Rematch4::
         goto_if_defeated TRAINER_ROXANNE_5, RustboroCity_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_ROXANNE_5, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
+        trainerbattle_double TRAINER_ROXANNE_5, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons, RustboroCity_Gym_EventScript_RematchDefeated4
+RustboroCity_Gym_EventScript_RematchDefeated4:
         goto_if_not_defeated TRAINER_ROXANNE_5, RustboroCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_5, RustboroCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_5, RustboroCity_Gym_EventScript_NoRematch

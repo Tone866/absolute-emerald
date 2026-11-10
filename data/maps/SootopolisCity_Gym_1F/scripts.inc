@@ -95,7 +95,8 @@ SootopolisCity_Gym_1F_EventScript_Juan::
 
 SootopolisCity_Gym_EventScript_Rematch1::
         goto_if_defeated TRAINER_JUAN_2, SootopolisCity_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_JUAN_2, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons
+        trainerbattle_double TRAINER_JUAN_2, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons, SootopolisCity_Gym_EventScript_RematchDefeated1
+SootopolisCity_Gym_EventScript_RematchDefeated1:
         goto_if_not_defeated TRAINER_ROXANNE_2, SootopolisCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_2, SootopolisCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_2, SootopolisCity_Gym_EventScript_NoRematch
@@ -108,7 +109,8 @@ SootopolisCity_Gym_EventScript_Rematch1::
 
 SootopolisCity_Gym_EventScript_Rematch2::
         goto_if_defeated TRAINER_JUAN_3, SootopolisCity_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_JUAN_3, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons
+        trainerbattle_double TRAINER_JUAN_3, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons, SootopolisCity_Gym_EventScript_RematchDefeated2
+SootopolisCity_Gym_EventScript_RematchDefeated2:
         goto_if_not_defeated TRAINER_ROXANNE_3, SootopolisCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_3, SootopolisCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_3, SootopolisCity_Gym_EventScript_NoRematch
@@ -121,7 +123,8 @@ SootopolisCity_Gym_EventScript_Rematch2::
 
 SootopolisCity_Gym_EventScript_Rematch3::
         goto_if_defeated TRAINER_JUAN_4, SootopolisCity_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_JUAN_4, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons
+        trainerbattle_double TRAINER_JUAN_4, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons, SootopolisCity_Gym_EventScript_RematchDefeated3
+SootopolisCity_Gym_EventScript_RematchDefeated3:
         goto_if_not_defeated TRAINER_ROXANNE_4, SootopolisCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_4, SootopolisCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_4, SootopolisCity_Gym_EventScript_NoRematch
@@ -134,7 +137,8 @@ SootopolisCity_Gym_EventScript_Rematch3::
 
 SootopolisCity_Gym_EventScript_Rematch4::
         goto_if_defeated TRAINER_JUAN_5, SootopolisCity_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_JUAN_5, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons
+        trainerbattle_double TRAINER_JUAN_5, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons, SootopolisCity_Gym_EventScript_RematchDefeated4
+SootopolisCity_Gym_EventScript_RematchDefeated4:
         goto_if_not_defeated TRAINER_ROXANNE_5, SootopolisCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_5, SootopolisCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_5, SootopolisCity_Gym_EventScript_NoRematch

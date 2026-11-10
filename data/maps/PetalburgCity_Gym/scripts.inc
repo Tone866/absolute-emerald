@@ -410,7 +410,8 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 
 PetalburgTown_Gym_EventScript_Rematch1::
         goto_if_defeated TRAINER_NORMAN_2, PetalburgTown_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_NORMAN_2, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons
+        trainerbattle_double TRAINER_NORMAN_2, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons, PetalburgTown_Gym_EventScript_RematchDefeated1
+PetalburgTown_Gym_EventScript_RematchDefeated1:
         goto_if_not_defeated TRAINER_ROXANNE_2, PetalburgTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_2, PetalburgTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_2, PetalburgTown_Gym_EventScript_NoRematch
@@ -423,7 +424,8 @@ PetalburgTown_Gym_EventScript_Rematch1::
 
 PetalburgTown_Gym_EventScript_Rematch2::
         goto_if_defeated TRAINER_NORMAN_3, PetalburgTown_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_NORMAN_3, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons
+        trainerbattle_double TRAINER_NORMAN_3, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons, PetalburgTown_Gym_EventScript_RematchDefeated2
+PetalburgTown_Gym_EventScript_RematchDefeated2:
         goto_if_not_defeated TRAINER_ROXANNE_3, PetalburgTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_3, PetalburgTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_3, PetalburgTown_Gym_EventScript_NoRematch
@@ -436,7 +438,8 @@ PetalburgTown_Gym_EventScript_Rematch2::
 
 PetalburgTown_Gym_EventScript_Rematch3::
         goto_if_defeated TRAINER_NORMAN_4, PetalburgTown_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_NORMAN_4, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons
+        trainerbattle_double TRAINER_NORMAN_4, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons, PetalburgTown_Gym_EventScript_RematchDefeated3
+PetalburgTown_Gym_EventScript_RematchDefeated3:
         goto_if_not_defeated TRAINER_ROXANNE_4, PetalburgTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_4, PetalburgTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_4, PetalburgTown_Gym_EventScript_NoRematch
@@ -449,7 +452,8 @@ PetalburgTown_Gym_EventScript_Rematch3::
 
 PetalburgTown_Gym_EventScript_Rematch4::
         goto_if_defeated TRAINER_NORMAN_5, PetalburgTown_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_NORMAN_5, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons
+        trainerbattle_double TRAINER_NORMAN_5, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons, PetalburgTown_Gym_EventScript_RematchDefeated4
+PetalburgTown_Gym_EventScript_RematchDefeated4:
         goto_if_not_defeated TRAINER_ROXANNE_5, PetalburgTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_5, PetalburgTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_5, PetalburgTown_Gym_EventScript_NoRematch

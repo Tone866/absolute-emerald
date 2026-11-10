@@ -63,7 +63,8 @@ LavaridgeTown_Gym_1F_EventScript_Flannery::
 
 LavaridgeTown_Gym_EventScript_Rematch1::
         goto_if_defeated TRAINER_FLANNERY_2, LavaridgeTown_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_FLANNERY_2, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons
+        trainerbattle_double TRAINER_FLANNERY_2, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons, LavaridgeTown_Gym_EventScript_RematchDefeated1
+LavaridgeTown_Gym_EventScript_RematchDefeated1:
         goto_if_not_defeated TRAINER_ROXANNE_2, LavaridgeTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_2, LavaridgeTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_2, LavaridgeTown_Gym_EventScript_NoRematch
@@ -76,7 +77,8 @@ LavaridgeTown_Gym_EventScript_Rematch1::
 
 LavaridgeTown_Gym_EventScript_Rematch2::
         goto_if_defeated TRAINER_FLANNERY_3, LavaridgeTown_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_FLANNERY_3, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons
+        trainerbattle_double TRAINER_FLANNERY_3, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons, LavaridgeTown_Gym_EventScript_RematchDefeated2
+LavaridgeTown_Gym_EventScript_RematchDefeated2:
         goto_if_not_defeated TRAINER_ROXANNE_3, LavaridgeTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_3, LavaridgeTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_3, LavaridgeTown_Gym_EventScript_NoRematch
@@ -89,7 +91,8 @@ LavaridgeTown_Gym_EventScript_Rematch2::
 
 LavaridgeTown_Gym_EventScript_Rematch3::
         goto_if_defeated TRAINER_FLANNERY_4, LavaridgeTown_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_FLANNERY_4, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons
+        trainerbattle_double TRAINER_FLANNERY_4, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons, LavaridgeTown_Gym_EventScript_RematchDefeated3
+LavaridgeTown_Gym_EventScript_RematchDefeated3:
         goto_if_not_defeated TRAINER_ROXANNE_4, LavaridgeTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_4, LavaridgeTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_4, LavaridgeTown_Gym_EventScript_NoRematch
@@ -102,7 +105,8 @@ LavaridgeTown_Gym_EventScript_Rematch3::
 
 LavaridgeTown_Gym_EventScript_Rematch4::
         goto_if_defeated TRAINER_FLANNERY_5, LavaridgeTown_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_FLANNERY_5, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons
+        trainerbattle_double TRAINER_FLANNERY_5, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons, LavaridgeTown_Gym_EventScript_RematchDefeated4
+LavaridgeTown_Gym_EventScript_RematchDefeated4:
         goto_if_not_defeated TRAINER_ROXANNE_5, LavaridgeTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_5, LavaridgeTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_5, LavaridgeTown_Gym_EventScript_NoRematch

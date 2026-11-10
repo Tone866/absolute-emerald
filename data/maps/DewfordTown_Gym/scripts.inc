@@ -147,7 +147,8 @@ DewfordTown_Gym_EventScript_Brawly::
 
 DewfordTown_Gym_EventScript_Rematch1::
         goto_if_defeated TRAINER_BRAWLY_2, DewfordTown_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_BRAWLY_2, DewfordTown_Gym_Text_BrawlyPreRematch, DewfordTown_Gym_Text_BrawlyRematchDefeat, DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons
+        trainerbattle_double TRAINER_BRAWLY_2, DewfordTown_Gym_Text_BrawlyPreRematch, DewfordTown_Gym_Text_BrawlyRematchDefeat, DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons, DewfordTown_Gym_EventScript_RematchDefeated1
+DewfordTown_Gym_EventScript_RematchDefeated1:
         goto_if_not_defeated TRAINER_ROXANNE_2, DewfordTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_2, DewfordTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_2, DewfordTown_Gym_EventScript_NoRematch
@@ -160,7 +161,8 @@ DewfordTown_Gym_EventScript_Rematch1::
 
 DewfordTown_Gym_EventScript_Rematch2::
         goto_if_defeated TRAINER_BRAWLY_3, DewfordTown_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_BRAWLY_3, DewfordTown_Gym_Text_BrawlyPreRematch, DewfordTown_Gym_Text_BrawlyRematchDefeat, DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons
+        trainerbattle_double TRAINER_BRAWLY_3, DewfordTown_Gym_Text_BrawlyPreRematch, DewfordTown_Gym_Text_BrawlyRematchDefeat, DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons, DewfordTown_Gym_EventScript_RematchDefeated2
+DewfordTown_Gym_EventScript_RematchDefeated2:
         goto_if_not_defeated TRAINER_ROXANNE_3, DewfordTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_3, DewfordTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_3, DewfordTown_Gym_EventScript_NoRematch
@@ -173,7 +175,8 @@ DewfordTown_Gym_EventScript_Rematch2::
 
 DewfordTown_Gym_EventScript_Rematch3::
         goto_if_defeated TRAINER_BRAWLY_4, DewfordTown_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_BRAWLY_4, DewfordTown_Gym_Text_BrawlyPreRematch, DewfordTown_Gym_Text_BrawlyRematchDefeat, DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons
+        trainerbattle_double TRAINER_BRAWLY_4, DewfordTown_Gym_Text_BrawlyPreRematch, DewfordTown_Gym_Text_BrawlyRematchDefeat, DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons, DewfordTown_Gym_EventScript_RematchDefeated3
+DewfordTown_Gym_EventScript_RematchDefeated3:
         goto_if_not_defeated TRAINER_ROXANNE_4, DewfordTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_4, DewfordTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_4, DewfordTown_Gym_EventScript_NoRematch
@@ -186,7 +189,8 @@ DewfordTown_Gym_EventScript_Rematch3::
 
 DewfordTown_Gym_EventScript_Rematch4::
         goto_if_defeated TRAINER_BRAWLY_5, DewfordTown_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_BRAWLY_5, DewfordTown_Gym_Text_BrawlyPreRematch, DewfordTown_Gym_Text_BrawlyRematchDefeat, DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons
+        trainerbattle_double TRAINER_BRAWLY_5, DewfordTown_Gym_Text_BrawlyPreRematch, DewfordTown_Gym_Text_BrawlyRematchDefeat, DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons, DewfordTown_Gym_EventScript_RematchDefeated4
+DewfordTown_Gym_EventScript_RematchDefeated4:
         goto_if_not_defeated TRAINER_ROXANNE_5, DewfordTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_5, DewfordTown_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_5, DewfordTown_Gym_EventScript_NoRematch

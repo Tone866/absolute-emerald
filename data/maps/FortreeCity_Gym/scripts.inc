@@ -31,7 +31,8 @@ FortreeCity_Gym_EventScript_Winona::
 
 FortreeCity_Gym_EventScript_Rematch1::
         goto_if_defeated TRAINER_WINONA_2, FortreeCity_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_WINONA_2, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons
+        trainerbattle_double TRAINER_WINONA_2, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons, FortreeCity_Gym_EventScript_RematchDefeated1
+FortreeCity_Gym_EventScript_RematchDefeated1:
         goto_if_not_defeated TRAINER_ROXANNE_2, FortreeCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_2, FortreeCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_2, FortreeCity_Gym_EventScript_NoRematch
@@ -44,7 +45,8 @@ FortreeCity_Gym_EventScript_Rematch1::
 
 FortreeCity_Gym_EventScript_Rematch2::
         goto_if_defeated TRAINER_WINONA_3, FortreeCity_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_WINONA_3, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons
+        trainerbattle_double TRAINER_WINONA_3, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons, FortreeCity_Gym_EventScript_RematchDefeated2
+FortreeCity_Gym_EventScript_RematchDefeated2:
         goto_if_not_defeated TRAINER_ROXANNE_3, FortreeCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_3, FortreeCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_3, FortreeCity_Gym_EventScript_NoRematch
@@ -57,7 +59,8 @@ FortreeCity_Gym_EventScript_Rematch2::
 
 FortreeCity_Gym_EventScript_Rematch3::
         goto_if_defeated TRAINER_WINONA_4, FortreeCity_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_WINONA_4, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons
+        trainerbattle_double TRAINER_WINONA_4, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons, FortreeCity_Gym_EventScript_RematchDefeated3
+FortreeCity_Gym_EventScript_RematchDefeated3:
         goto_if_not_defeated TRAINER_ROXANNE_4, FortreeCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_4, FortreeCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_4, FortreeCity_Gym_EventScript_NoRematch
@@ -70,7 +73,8 @@ FortreeCity_Gym_EventScript_Rematch3::
 
 FortreeCity_Gym_EventScript_Rematch4::
         goto_if_defeated TRAINER_WINONA_5, FortreeCity_Gym_EventScript_NoRematch
-        trainerbattle_double TRAINER_WINONA_5, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons
+        trainerbattle_double TRAINER_WINONA_5, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons, FortreeCity_Gym_EventScript_RematchDefeated4
+FortreeCity_Gym_EventScript_RematchDefeated4:
         goto_if_not_defeated TRAINER_ROXANNE_5, FortreeCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_BRAWLY_5, FortreeCity_Gym_EventScript_NoRematch
         goto_if_not_defeated TRAINER_WATTSON_5, FortreeCity_Gym_EventScript_NoRematch
