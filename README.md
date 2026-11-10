@@ -1,12 +1,21 @@
-# Pokémon Emerald
+# Absolute Emerald
 
-This is a decompilation of Pokémon Emerald.
+German Pokemon Emerald Romhack
 
-It builds the following ROM:
+deutscher Pokemon Smaragd Romhack
 
-* [**pokeemerald.gba**](https://datomatic.no-intro.org/index.php?page=show_record&s=23&n=1961) `sha1: f3ae088181bf583e55daf962a92bb46f4f1d07b7`
-* [**pokeemerald_de.gba**](https://datomatic.no-intro.org/index.php?page=show_record&s=23&n=2159) `sha1: 61c2eb2b380b1a75f0c94b767a2d4c26cd7ce4e3`
+## Features
 
-To set up the repository, see [INSTALL.md](INSTALL.md).
+- alle Hoenn Pokemon fangbar
+- stärkere Arena / Liga Rematches
+- alle Tickets verfügbar
+- mehr besondere Trainer im Endgame
+- alle Trainer stehen für Rematches bereit
+- niedrige-KP-Beep beept jetzt nur noch 3x
+- Tauschentwicklungen entwickeln sich jetzt durch Lvl-Up
+- weniger Schritte für Eier nötig
+- Meteorfälle und Playersprite wurden von Rubin übernommen
 
-For contacts and other pret projects, see [pret.github.io](https://pret.github.io/).
+## Install
+
+To set up the repository, see INSTALL.md.
